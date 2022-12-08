@@ -1,0 +1,45 @@
+version: '3.8'
+name: sellmore
+services:
+  backend:
+    env_file: ./docker/.env
+    build:
+      context: docker/local
+      dockerfile: Dockerfile
+      args:
+        - USER
+        - UID
+        - GID
+    restart: unless-stopped
+    volumes:
+      - ./src:/var/www/html/backend
+    depends_on:
+      - db
+  db:
+    image: postgres:13.4-alpine3.14
+    restart: on-failure:2
+    ports:
+      - "5432:5432"
+    volumes:
+      - sellmore_db:/var/lib/postgresql/data:cached
+    environment:
+      POSTGRES_DB: common
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpass
+  nginx:
+    image: nginx:1.19.10-alpine
+    restart: on-failure:10
+    ports:
+      - '80:80'
+    volumes:
+      - ./src:/var/www/html/backend
+      - ./docker/local/nginx/site.conf:/etc/nginx/conf.d/site.conf
+    env_file: ./docker/.env
+    expose:
+      - 80
+    command: ["nginx", "-g", "daemon off;"]
+    depends_on:
+      - backend
+
+volumes:
+  sellmore_db:

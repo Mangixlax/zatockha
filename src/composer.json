@@ -1,0 +1,67 @@
+{
+    "name": "october/october",
+    "description": "Built using October CMS: The Laravel-Based CMS Engineered For Simplicity",
+    "type": "project",
+    "homepage": "https://octobercms.com",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.0.2",
+        "october/system": "3.1.*",
+        "october/backend": "3.1.*",
+        "october/cms": "3.1.*",
+        "october/editor": "3.1.*",
+        "october/media": "3.1.*",
+        "october/rain": "3.1.*",
+        "laravel/framework": "^9.0",
+        "ext-simplexml": "*",
+        "ext-xmlreader": "*",
+        "ext-libxml": "*",
+        "guzzlehttp/guzzle": "^7.4",
+        "ext-fileinfo": "*",
+        "symfony/dom-crawler": "^5.3",
+        "zen/robots-plugin": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5|^9.0",
+        "rainlab/builder-plugin": "^1.1"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate --ansi"
+        ],
+        "post-autoload-dump": [
+            "System\\Console\\ComposerScript::postAutoloadDump"
+        ],
+        "post-update-cmd": [
+            "System\\Console\\ComposerScript::postUpdateCmd"
+        ],
+        "pre-package-uninstall": [
+            "System\\Console\\ComposerScript::prePackageUninstall"
+        ],
+        "test": [
+            "phpunit --stop-on-failure"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "System\\Console\\": "modules/system/console"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "octobercms": {
+            "type": "composer",
+            "url": "https://gateway.octobercms.com"
+        }
+    }
+}
