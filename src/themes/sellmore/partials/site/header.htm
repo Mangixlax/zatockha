@@ -1,24 +1,153 @@
-<!-- Nav -->
+<!-- header -->
 {% placeholder headerBefore %}
-<nav id="layout-nav" class="navbar navbar-expand-lg navbar-dark">
-    <div class="navbar-container container">
-        <a class="navbar-brand" href="{{ 'index'|page }}">
-            <img src="{{ 'assets/images/logo.svg'|theme }}" alt="October CMS Demo" width="230" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                {% partial 'site/nav' %}
-            </ul>
+<header class="page-header" id="page-header">
+    <div class="logo-panel" id="logo-panel">
+        <div class="logo-panel__inner">
+            <a
+                href="index.html"
+                class="logo logo-panel__logo"
+                role="img"
+                title="logoHeader"
+            ></a>
+            <div class="logo-panel__nav">
+                <a
+                    href="about/index.html"
+                    class="logo-panel__nav-item js-scrollScreen"
+                >
+                    о компании
+                </a>
+                <a
+                    href="novosti/index.html"
+                    class="logo-panel__nav-item js-scrollScreen"
+                >
+                    Новости
+                </a>
+                <a
+                    href="portfolio/index.html"
+                    class="logo-panel__nav-item js-scrollScreen"
+                    >Портфолио</a
+                >
+                <a
+                    href="contacts/index.html"
+                    class="logo-panel__nav-item js-scrollScreen"
+                    >контакты</a
+                >
+            </div>
+            <a href="tel:+74994508575" class="logo-panel__tel js-dct-phone"
+                >+7 (499) 450-85-75</a
+            >
+            <div class="logo-panel__btn-wrapper">
+                <a
+                    href="javascript:void(0)"
+                    class="btn btn--medium btn--primary logo-panel__btn"
+                    data-modal-form-desc="Форма в шапке"
+                    data-uk-modal="{target:'#modal-callback', center:true}"
+                    >Заказать звонок</a
+                >
+            </div>
+            <button
+                class="logo-panel__burger hamburger hamburger--spin"
+                id="hamburger"
+                type="button"
+            >
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
     </div>
-</nav>
-<div id="layout-nav-decorations">
-    <div class="navbar-decorations container">
-        <div class="navbar-decoration-1"></div>
-        <div class="navbar-decoration-2"></div>
+
+    <div class="header-navbar" id="header-navbar">
+        <div class="header-navbar__inner">
+            <div class="header-navbar__nav">
+                <ul class="header-navbar__nav-list">
+                    <li class="header-navbar__nav-item">
+                        <a href="seo/index.html" class="header-navbar__nav-link"
+                            >SEO</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a href="smm/index.html" class="header-navbar__nav-link"
+                            >SMM</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="serm/index.html"
+                            class="header-navbar__nav-link"
+                            >Управление репутацией</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="context/index.html"
+                            class="header-navbar__nav-link"
+                            >Контекстная реклама</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="target/index.html"
+                            class="header-navbar__nav-link"
+                            >Таргетированная реклама</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="media/index.html"
+                            class="header-navbar__nav-link"
+                            >Медийная реклама</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="leads/index.html"
+                            class="header-navbar__nav-link"
+                            >Лидогенерация</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="sozdanie-saitov/index.html"
+                            class="header-navbar__nav-link"
+                            >Веб-разработка</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="header-navbar__mobile-nav">
+                <ul class="header-navbar__nav-list">
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="about/index.html"
+                            class="header-navbar__nav-link js-scrollScreen"
+                            >О компании</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="novosti/index.html"
+                            class="header-navbar__nav-link js-scrollScreen"
+                            >Новости</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="portfolio/index.html"
+                            class="header-navbar__nav-link js-scrollScreen"
+                            >Портфолио</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="contacts/index.html"
+                            class="header-navbar__nav-link js-scrollScreen"
+                            >Контакты</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
+</header>
 {% placeholder headerAfter %}
