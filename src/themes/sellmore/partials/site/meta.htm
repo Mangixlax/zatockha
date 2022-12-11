@@ -14,6 +14,10 @@
 <link href="{{ 'assets/vendor/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css'|theme }}" rel="stylesheet">
 <link href="{{ ['assets/less/theme.less']|theme }}" rel="stylesheet">
 {% styles %}
+<link href="{{ ['assets/scss/theme.scss']|theme }}" rel="stylesheet" />
+{% styles %}
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&amp;subset=cyrillic" rel="stylesheet" />
+{% styles %}
 <script src="{{ 'assets/vendor/jquery.min.js'|theme }}"></script>
 <script src="{{ 'assets/vendor/bootstrap/bootstrap.min.js'|theme }}"></script>
 <script src="{{ 'assets/vendor/codeblocks/codeblocks.min.js'|theme }}"></script>
@@ -21,7 +25,6 @@
 <script src="{{ 'assets/js/app.js'|theme }}"></script>
 {% framework extras turbo %}
 {% scripts %}
-
 <script type="module">
     import PhotoSwipeLightbox from "{{ 'assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js'|theme }}";
     import PhotoSwipeModule from  "{{ 'assets/vendor/photoswipe/photoswipe.esm.min.js'|theme }}"
