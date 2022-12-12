@@ -1,104 +1,116 @@
-<div class="element-footer {{ blueFooterStyle|default(false) ? 'footer-bluezone' }}">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-lg-6 col-xl-5">
-                <div class="footer-brand">
-                    <img src="{{ 'assets/images/logo.svg'|theme }}" alt="October CMS Demo" width="270" />
+<footer class="page-footer">
+    <div class="page-footer__inner">
+        <div class="page-footer__contain">
+            <div class="page-footer__info">
+                <a href="index.html" class="logo page-footer__logo"></a>
+                <div class="page-footer__socials">
+                    <p>Мы в соц. сетях:</p>
+                    <div class="page-footer__socials-list">
+                        <a
+                            class="page-footer__socials-item page-footer__socials-item--vk"
+                            href="https://vk.com/sellmore"
+                            rel="nofollow"
+                            target="_blank"
+                        ></a>
+                        <a
+                            class="page-footer__socials-item page-footer__socials-item--fb"
+                            href="https://www.facebook.com/sellmore.ru"
+                            rel="nofollow"
+                            target="_blank"
+                        ></a>
+                    </div>
                 </div>
-                <div class="footer-nav">
-                    <div class="row gx-0">
-                        <div class="col-md-4 mb-3">
-                            <ul class="nav flex-column">
-                                <li class="nav-item nav-item-header">
-                                    <a class="nav-link" href="{{ 'index'|page }}">Company</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ 'blog/index'|page }}">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ 'wiki/index'|page }}">Wiki</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ 'about'|page }}">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ 'contact'|page }}">Contact</a>
-                                </li>
-                            </ul>
+            </div>
+            <div class="page-footer__nav">
+                <div class="page-footer__nav-list">
+                    <div class="page-footer__nav-col">
+                        <p class="page-footer__nav-title">Услуги</p>
+                        <div class="page-footer__nav-contain">
+                            <a
+                                href="seo/index.html"
+                                class="page-footer__nav-link"
+                                >SEO</a
+                            >
+                            <a
+                                href="smm/index.html"
+                                class="page-footer__nav-link"
+                                >SMM</a
+                            >
+                            <a
+                                href="serm/index.html"
+                                class="page-footer__nav-link"
+                                >Управление репутацией</a
+                            >
+                            <a
+                                href="context/index.html"
+                                class="page-footer__nav-link"
+                                >Контекстная реклама</a
+                            >
                         </div>
-                        <div class="col-md-4 mb-3">
-                            <ul class="nav flex-column">
-                                <li class="nav-item nav-item-header">
-                                    <a class="nav-link" href="{{ 'index'|page }}">Technology</a>
-                                </li>
-                                {% if backendUrl %}
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ backendUrl }}" target="backend">Backend Area</a>
-                                    </li>
-                                {% endif %}
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ 'ajax'|page }}">AJAX Demo</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ 'components'|page }}">Components Demo</a>
-                                </li>
-                            </ul>
+                    </div>
+                    <div class="page-footer__nav-col">
+                        <div class="page-footer__nav-contain">
+                            <a
+                                href="target/index.html"
+                                class="page-footer__nav-link"
+                                >Таргетированная реклама</a
+                            >
+                            <a
+                                href="media/index.html"
+                                class="page-footer__nav-link"
+                                >Медийная реклама</a
+                            >
+                            <a
+                                href="leads/index.html"
+                                class="page-footer__nav-link"
+                                >Лидогенерация</a
+                            >
+                            <a
+                                href="sozdanie-saitov/index.html"
+                                class="page-footer__nav-link"
+                                >Веб-разработка</a
+                            >
                         </div>
-                        <div class="col-md-4 mb-3">
-                            <ul class="nav flex-column">
-                                <li class="nav-item nav-item-header">
-                                    <a class="nav-link" href="https://octobercms.com" target="_blank">October CMS</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://docs.octobercms.com" target="_blank">Documentation</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://octobercms.com/pricing" target="_blank">Buy a License</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://www.youtube.com/c/OctoberCMSOfficial" target="_blank">YouTube Channel</a>
-                                </li>
-                            </ul>
+                    </div>
+                    <div class="page-footer__nav-col">
+                        <p class="page-footer__nav-title">Компания</p>
+                        <div class="page-footer__nav-contain">
+                            <a
+                                href="about/index.html"
+                                class="page-footer__nav-link js-scrollScreen"
+                                >О нас</a
+                            >
+                            <a
+                                href="contacts/index.html"
+                                class="page-footer__nav-link js-scrollScreen"
+                                >Контакты</a
+                            >
+                            <a
+                                href="portfolio/index.html"
+                                class="page-footer__nav-link js-scrollScreen"
+                                >Портфолио</a
+                            >
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="footer-social">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://dribbble.com/" target="_blank">
-                                <img src="{{ 'assets/images/social-icons-white/dribbble-white.png'|theme }}" alt="Dribbble"  />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://www.linkedin.com/company/october-cms/" target="_blank">
-                                <img src="{{ 'assets/images/social-icons-white/linkedin-white.png'|theme }}" alt="LinkedIn"  />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://twitter.com/octobercms" target="_blank">
-                                <img src="{{ 'assets/images/social-icons-white/twitter-white.png'|theme }}" alt="Twitter" />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://www.facebook.com/octobercms" target="_blank">
-                                <img src="{{ 'assets/images/social-icons-white/facebook-white.png'|theme }}" alt="Facebook" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="footer-copyright">
-                    <p>&copy; {{ "now"|date("Y") }} Your Company Name</p>
-                    <p>All rights reserved</p>
-                </div>
+    </div>
+    <div class="page-footer__copyright-panel">
+        <div class="page-footer__copyright-panel-inner">
+            <p class="page-footer__year">© Sellmore, 2019</p>
+            <div class="sitemap__footer-wrap">
+                <a href="sitemap/index.html" class="sitemap__footer-link"
+                    >Карта сайта</a
+                >
+                <a
+                    href="policy/index.html"
+                    rel="nofollow"
+                    target="_blank"
+                    class="link page-footer__policy-link"
+                    >Политика конфиденциальности</a
+                >
             </div>
         </div>
-        <div class="footer-decoration-1"></div>
-        <div class="footer-decoration-2"></div>
     </div>
-</div>
+</footer>

@@ -1,3 +1,5 @@
+$assets-url: "../../assets";
+
 body {
   font-family: Montserrat, sans-serif
 }
@@ -5,4 +7,153 @@ body {
 ol,
 ul {
   list-style: none;
+}
+
+.about-numbers__inner,
+.audit-kinds__inner,
+.audit-research__inner,
+.audit-results__inner,
+.breadcrumbs__inner,
+.header-navbar__inner,
+.jumbotron__inner,
+.logo-panel__inner,
+.page-about__about__inner,
+.page-clients__clients-inner,
+.page-contacts__hat-inner,
+.page-contacts__map-popup-wrapper,
+.page-footer__copyright-panel-inner,
+.page-footer__inner,
+.page-policy___contain,
+.section-inner,
+.seo-advancement__inner,
+.seo-brif__inner,
+.seo-steps__inner,
+.why__inner {
+  max-width: 1205px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 25px
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline
+}
+
+@media only screen and (max-width:767px) {
+  .about-numbers__inner,
+  .audit-kinds__inner,
+  .audit-research__inner,
+  .audit-results__inner,
+  .breadcrumbs__inner,
+  .header-navbar__inner,
+  .jumbotron__inner,
+  .logo-panel__inner,
+  .page-about__about__inner,
+  .page-clients__clients-inner,
+  .page-contacts__hat-inner,
+  .page-contacts__map-popup-wrapper,
+  .page-footer__copyright-panel-inner,
+  .page-footer__inner,
+  .page-policy___contain,
+  .section-inner,
+  .seo-advancement__inner,
+  .seo-brif__inner,
+  .seo-steps__inner,
+  .why__inner {
+    padding-left: 20px;
+    padding-right: 20px
+  }
+}
+
+@font-face {
+  font-family: fontello;
+  src: url(/themes/sellmore/assets/fonts/fontello.woff) format("woff");
+  font-weight: 400;
+  font-style: normal
 }
