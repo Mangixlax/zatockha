@@ -1,7 +1,15 @@
 $assets-url: "../../assets";
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Montserrat, sans-serif
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #263238;
 }
 
 ol,
@@ -125,74 +133,195 @@ video {
   vertical-align: baseline
 }
 
+.tg {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -.4px
+}
+
+.tg p+p {
+  margin-top: 30px
+}
+
 .tg h3,
 .tg>ol>li {
-  padding-left: 0;
-  font-size: 19px
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.3em;
+  letter-spacing: -.65px;
+  color: #1646bb;
+  position: relative;
+  padding-left: 38px
 }
 
 .tg h3:after,
 .tg>ol>li:after {
-  display: none
+  content: '';
+  width: 28px;
+  height: 4px;
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  top: .5em;
+  left: 0;
+  margin-right: 10px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#1646bb), to(#fff));
+  background-image: -webkit-linear-gradient(right, #1646bb 0, #fff 100%);
+  background-image: -moz- oldlinear-gradient(right, #1646bb 0, #fff 100%);
+  background-image: -o-linear-gradient(right, #1646bb 0, #fff 100%);
+  background-image: linear-gradient(to left, #1646bb 0, #fff 100%)
+}
+
+.tg a {
+  color: #1646bb;
+  text-decoration: none;
+  -webkit-transition: all .2s ease 0s;
+  -o-transition: all .2s ease 0s;
+  -moz-transition: all .2s ease 0s;
+  transition: all .2s ease 0s
+}
+
+.tg a:visited {
+  color: #551a8b
+}
+
+.tg a:hover {
+  color: #1c58ea
+}
+
+.tg strong {
+  font-weight: 700;
+  color: #192440
 }
 
 .tg li,
 .tg p,
 .tg table {
-  font-size: 14px
+  letter-spacing: -.4px;
+  line-height: 26px;
+  font-size: 16px;
+  display: block;
+  font-weight: 400;
+  color: #263238
+}
+
+.tg table {
+  margin-top: -20px;
+  font-weight: 500
 }
 
 .tg table td {
-  padding-left: 15px
+  padding-left: 30px;
+  padding-top: 20px
 }
 
 .tg h1 {
-  font-size: 30px
+  font-size: 58px;
+  font-weight: 500;
+  color: #1646bb;
+  line-height: 1.2em
+}
+
+.tg h1+p {
+  margin-top: 45px
 }
 
 .tg p+h3 {
-  margin-top: 40px
+  margin-top: 80px
 }
 
 .tg h3+p {
-  margin-top: 20px
+  margin-top: 35px
 }
 
 .tg p+ol {
-  margin-top: 40px
+  margin-top: 70px
 }
 
 .tg h3+ol {
-  margin-top: 22px
+  margin-top: 42px
 }
 
 .tg li+li {
-  margin-top: 20px
+  margin-top: 35px
 }
 
-.tg>ol>li p {
-  margin-left: 0
+.tg ul {
+  list-style: none
 }
 
-.tg>ol>li table {
-  margin-left: -15px
+.tg ul li+li {
+  margin-top: 7px
 }
 
-.tg>ol>li p {
-  margin-top: 25px
+.tg ul li {
+  position: relative;
+  padding-left: 40px
+}
+
+.tg ul li:before {
+  content: '\E804';
+  font-family: fontello;
+  font-size: 22px;
+  line-height: 26px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  color: #1646bb;
+  display: inline;
+  position: absolute;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: text-top;
+  left: 0
+}
+
+.tg ol li ul {
+  margin-top: 7px
+}
+
+.tg ol {
+  counter-reset: li
+}
+
+.tg ol>li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+  font-weight: 500;
+  margin-right: 15px
 }
 
 .tg>ol>li {
-  margin-top: 40px
+  margin-top: 70px
+}
+
+.tg>ol>li p {
+  font-weight: 500;
+  margin-left: -35px
+}
+
+.tg>ol>li table {
+  margin-left: -65px
+}
+
+.tg>ol>li p {
+  margin-top: 35px
+}
+
+.tg>ol>li:before {
+  margin-right: 0
 }
 
 .tg>ol>li>ol {
-  margin-left: 0;
-  margin-top: 25px
+  margin-left: -35px;
+  margin-top: 35px
 }
 
 @media only screen and (max-width:767px) {
-
   .about-numbers__inner,
   .audit-kinds__inner,
   .audit-research__inner,
@@ -215,6 +344,72 @@ video {
   .why__inner {
     padding-left: 20px;
     padding-right: 20px
+  }
+
+  .tg h3,
+  .tg>ol>li {
+    padding-left: 0;
+    font-size: 19px
+  }
+
+  .tg h3:after,
+  .tg>ol>li:after {
+    display: none
+  }
+
+  .tg li,
+  .tg p,
+  .tg table {
+    font-size: 14px
+  }
+
+  .tg table td {
+    padding-left: 15px
+  }
+
+  .tg h1 {
+    font-size: 30px
+  }
+
+  .tg p+h3 {
+    margin-top: 40px
+  }
+
+  .tg h3+p {
+    margin-top: 20px
+  }
+
+  .tg p+ol {
+    margin-top: 40px
+  }
+
+  .tg h3+ol {
+    margin-top: 22px
+  }
+
+  .tg li+li {
+    margin-top: 20px
+  }
+
+  .tg>ol>li p {
+    margin-left: 0
+  }
+
+  .tg>ol>li table {
+    margin-left: -15px
+  }
+
+  .tg>ol>li p {
+    margin-top: 25px
+  }
+
+  .tg>ol>li {
+    margin-top: 40px
+  }
+
+  .tg>ol>li>ol {
+    margin-left: 0;
+    margin-top: 25px
   }
 }
 

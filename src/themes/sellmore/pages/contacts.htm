@@ -1,105 +1,85 @@
 ##
-title = "Demonstration"
+title = "Contacts Page"
 url = "/contacts"
 layout = "default"
 meta_title = "Welcome"
 
-[collection blog]
-handle = "Blog\Post"
-
-[resources]
-less[] = "pages/index.less"
-vars[howItsMadeCmsTemplate] = 'cms:cms-page:index.htm'
 ==
-{% set latestPosts = blog.limit(3).get %}
 
-<main class="page-main page-index">
-    <div class="hero">
-        <div class="hero__inner">
-            <div class="hero__slider owl-carousel" id="hero-slider">
-                <div
-                    class="hero__slider-item"
-                    style="background-image: url('themes/sellmore/assets/images/banners/banner3.jpg')"
-                >
-                    <div class="section-inner">
-                        <p class="hero__title">Ведение контекста в подарок</p>
-                        <p class="hero__subtitle">
-                            Для наших SEO-клиентов бесплатно ведём рекламные
-                            кампании в Директе и Google Реклама при бюджете до
-                            50 000 рублей в месяц
-                        </p>
-                        <div class="hero__more">
-                            <a
-                                href="javascript:void(0)"
-                                class="btn btn--primary btn--medium"
-                                data-modal-form-desc="Баннер на главной странице"
-                                data-modal-title="Получить бесплатное ведение контекста"
-                                data-modal-btn-text="Отправить заявку"
-                                data-uk-modal="{target:'#modal-callback'}"
-                                >хочу SEO + контекст</a
-                            >
-                            <a
-                                href="context/index.html"
-                                class="btn btn--outline btn--medium hero__detailed-btn"
-                                >подробнее</a
-                            >
-                        </div>
-                    </div>
+<main class="page-main page-contacts">
+    <div class="breadcrumbs page-contacts__breadcrumb">
+        <div class="breadcrumbs__inner">
+            <div class="breadcrumbs__contain">
+                <div class="breadcrumbs__item">
+                    <a href="../index.html" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Главная</span>
+                    </a>
                 </div>
-                <div
-                    class="hero__slider-item"
-                    style="background-image: url('themes/sellmore/assets/images/banners/banner1.jpg')"
-                >
-                    <div class="section-inner">
-                        <p class="hero__title">Увеличение продаж</p>
-                        <p class="hero__subtitle">
-                            Повысим привлекательность вашей площадки и увеличим
-                            количество продаж или заявок на услуги
-                        </p>
-                        <div class="hero__more">
-                            <a
-                                href="javascript:void(0)"
-                                class="btn btn--primary btn--medium"
-                                data-modal-form-desc="Баннер на главной странице"
-                                data-uk-modal="{target:'#modal-callback'}"
-                                >Получить консультацию</a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="hero__slider-item"
-                    style="background-image: url('themes/sellmore/assets/images/banners/banner2.jpg')"
-                >
-                    <div class="section-inner">
-                        <p class="hero__title">Комплексный маркетинг</p>
-                        <p class="hero__subtitle">
-                            Мы анализируем, разрабатываем и сопровождаем проекты
-                            любой сложности
-                        </p>
-                        <div class="hero__more">
-                            <a
-                                href="javascript:void(0)"
-                                class="btn btn--primary btn--medium"
-                                data-modal-form-desc="Баннер на главной странице"
-                                data-uk-modal="{target:'#modal-callback'}"
-                                >Получить консультацию</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-inner">
-                <div class="hero-niz">
-                    <img src="images/computer-mouse.png" alt="" />
-                    <span class="hero-chev1"></span>
-                    <span class="hero-chev2"></span>
-                </div>
-                <div class="hero__nav">
-                    <div class="hero__nav-prev" id="hero-prev"></div>
-                    <div class="hero__nav-next" id="hero-next"></div>
+
+                <div class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">Контакты</span>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="page-contacts__hat">
+        <div class="page-contacts__hat-inner">
+            <h1 class="page-contacts__title">Контакты</h1>
+        </div>
+    </div>
+    <div class="page-contacts__map-wrapper">
+        <div class="page-contacts__map-popup-wrapper">
+            <div class="page-contacts__map-popup">
+                <div class="page-contacts__map-popup-hat">
+                    <p>Москва</p>
+                </div>
+                <div class="page-contacts__map-popup-contain">
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">Адрес</p>
+                        <p class="page-contacts__map-popup-txt">
+                            107078, г. Москва, ул. Новорязанская, дом 18,
+                            строение 21, этаж П, помещение 25
+                        </p>
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">Телефон</p>
+                        <a
+                            href="tel:+74994508575"
+                            class="page-contacts__map-phone js-dct-phone"
+                            >+7 (499) 450-85-75</a
+                        >
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">
+                            Электронная почта
+                        </p>
+                        <a
+                            href="../cdn-cgi/l/email-protection.html#1179747d7d7e5162747d7d7c7e63743f6364"
+                            class="page-contacts__map-mail"
+                            ><span
+                                class="__cf_email__"
+                                data-cfemail="6d05080101022d1e08010100021f08431f18"
+                                >[email&#160;protected]</span
+                            ></a
+                        >
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">ИНН</p>
+                        <p class="page-contacts__map-popup-txt">​7723485783</p>
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">ОГРН</p>
+                        <p class="page-contacts__map-popup-txt">
+                            ​5167746304567
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+            type="text/javascript"
+        ></script>
+        <div class="page-contacts__map" id="contacts-map"></div>
     </div>
 </main>

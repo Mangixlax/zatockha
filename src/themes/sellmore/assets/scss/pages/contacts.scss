@@ -1,0 +1,129 @@
+.page-contacts__map-popup-wrapper {
+  position: relative;
+  height: 700px
+}
+
+.page-contacts__hat {
+  padding: 15px 0 30px 0
+}
+
+.page-contacts__title {
+  font-size: 46px;
+  font-weight: 400;
+}
+
+.page-contacts__map-wrapper {
+  position: relative
+}
+
+.page-contacts__map {
+  height: 700px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0
+}
+
+.page-contacts__map-popup-block:not(:first-child) {
+  margin-top: 35px
+}
+
+.page-contacts__map-popup-contain {
+  padding: 20px 20px 45px 20px
+}
+
+.page-contacts__map-popup-title {
+  font-weight: 700;
+  margin-bottom: 12px
+}
+
+.page-contacts__map-popup-txt {
+  line-height: 1.4em
+}
+
+.page-contacts__map-popup {
+  z-index: 20;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .22);
+  -moz-box-shadow: 0 0 30px rgba(0, 0, 0, .22);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .22);
+  border-top: none;
+  background-color: #fff;
+  position: absolute;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  width: 370px
+}
+
+.page-contacts__map-mail,
+.page-contacts__map-phone {
+  text-decoration: none;
+  color: #1646bb;
+  font-size: 18px
+}
+
+.page-contacts__map-popup-hat {
+  padding: 15px 0 15px 0;
+  text-align: center;
+  font-size: 24px;
+  background-color: #f0f3f5;
+  border-bottom: 1px solid #ddd
+}
+
+@media only screen and (max-width:959px) {
+  .page-contacts__map-popup-wrapper {
+    height: auto;
+    height: initial
+  }
+
+  .page-contacts__hat {
+    padding: 10px 0 20px 0
+  }
+
+  .page-contacts__title {
+    font-size: 30px
+  }
+
+  .page-contacts__map {
+    height: 500px;
+    position: static
+  }
+
+  .page-contacts__map-popup-block:not(:first-child) {
+    margin-top: 25px
+  }
+
+  .page-contacts__map-popup-contain {
+    padding-left: 0;
+    padding-right: 0
+  }
+
+  .page-contacts__map-popup {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    position: static;
+    width: 100%;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none
+  }
+
+  .page-contacts__map-popup-hat {
+    margin-left: -25px;
+    margin-right: -25px;
+    font-size: 20px
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .page-contacts__map {
+    height: 350px
+  }
+}
