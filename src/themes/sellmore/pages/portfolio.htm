@@ -6,12 +6,7 @@ meta_title = "Welcome"
 
 [collection blog]
 handle = "Blog\Post"
-
-[resources]
-less[] = "pages/index.less"
-vars[howItsMadeCmsTemplate] = 'cms:cms-page:index.htm'
 ==
-{% set latestPosts = blog.limit(3).get %}
 
 <main class="page-main page-index">
     <div class="hero">

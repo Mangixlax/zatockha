@@ -5,7 +5,6 @@ layout = "default"
 meta_title = "AJAX Framework"
 
 [resources]
-less[] = "pages/ajax.less"
 vars[blueFooterStyle] = 1
 vars[howItsMadeCmsTemplate] = 'cms:cms-page:ajax.htm'
 ==
@@ -34,7 +33,7 @@ function onTest()
 ?>
 ==
 {% put styles %}
-<link href="{{ ['assets/less/theme.less']|theme }}" rel="stylesheet">
+<link href="{{ ['assets/scss/theme.scss']|theme }}" rel="stylesheet">
 {% endput %}
 
 <div class="container pt-5">
