@@ -43,6 +43,87 @@
   padding-bottom: 0
 }
 
+.seo-steps {
+  padding: 75px 0 75px 0;
+  background-color: #f0f3f5
+}
+
+.seo-steps--padding {
+  padding-top: 0
+}
+
+.seo-brif {
+  background-image: url(../../assets/images/bg/brif-bg.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  padding: 75px 0 75px 0
+}
+
+.seo-brif__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3em;
+  letter-spacing: -.75px
+}
+
+.seo-brif__steps {
+  margin-top: 50px
+}
+
+.seo-brif__brif-link {
+  font-weight: 700
+}
+
+.seo-brif__steps-txt {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3em;
+  letter-spacing: 1.6px
+}
+
+.seo-brif__steps-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  width: 100%;
+  max-width: 495px
+}
+
+.seo-brif__steps-item:before {
+  color: #1646bb;
+  line-height: 30px;
+  font-size: 15px;
+  font-family: fontello, sans-serif;
+  margin-right: 15px;
+  width: 15px;
+  text-align: center
+}
+
+.seo-brif__steps-item.seo-brif__steps-item--download:before {
+  content: '\E807'
+}
+
+.seo-brif__steps-item.seo-brif__steps-item--fill:before {
+  content: '\E808'
+}
+
+.seo-brif__steps-item.seo-brif__steps-item--send:before {
+  content: '\E801'
+}
+
+.seo-brif__steps-item.seo-brif__steps-item--user:before {
+  content: '\F2C0'
+}
+
+.seo-brif__steps-item:not(:first-child) {
+  margin-top: 20px
+}
 @media only screen and (max-width:1023px) {
   .seo-advancement__list {
     margin-left: -40px
@@ -50,6 +131,21 @@
 
   .seo-advancement__col {
     padding-left: 40px
+  }
+
+  .seo-brif {
+    background-image: none
+  }
+
+  .seo-brif__title {
+    text-align: center
+  }
+
+  .seo-brif__steps {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto
   }
 }
 
@@ -60,6 +156,31 @@
 
   .seo-advancement__col {
     width: 50%
+  }
+
+  .seo-steps {
+    padding: 45px 0 0 0
+  }
+
+  .seo-steps__contain {
+    margin-left: -20px;
+    margin-right: -20px
+  }
+
+  .seo-brif {
+    padding: 45px 0 25px 0
+  }
+
+  .seo-brif__title {
+    font-size: 20px
+  }
+
+  .seo-brif__title br {
+    display: none
+  }
+
+  .seo-brif__steps-txt {
+    font-size: 16px
   }
 }
 
