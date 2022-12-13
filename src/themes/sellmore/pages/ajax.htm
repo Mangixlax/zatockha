@@ -33,6 +33,10 @@ function onTest()
 }
 ?>
 ==
+{% put styles %}
+<link href="{{ ['assets/less/theme.less']|theme }}" rel="stylesheet">
+{% endput %}
+
 <div class="container pt-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">

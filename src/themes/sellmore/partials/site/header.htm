@@ -4,27 +4,27 @@
     <div class="logo-panel" id="logo-panel">
         <div class="logo-panel__inner">
             <a
-                href="index.html"
+                href="{{ 'index'|page }}"
                 class="logo logo-panel__logo"
                 role="img"
                 title="logoHeader"
             ></a>
             <div class="logo-panel__nav">
                 <a
-                    href="about/index.html"
-                    class="logo-panel__nav-item js-scrollScreen"
+                    href="{{ 'index'|page }}"
+                    class="logo-panel__nav-item js-scrollScreen nav-link"
                 >
                     о компании
                 </a>
                 <a
-                    href="novosti/index.html"
-                    class="logo-panel__nav-item js-scrollScreen"
+                    href="{{ 'target'|page }}"
+                    class="logo-panel__nav-item js-scrollScreen nav-link"
                 >
                     Новости
                 </a>
                 <a
-                    href="portfolio/index.html"
-                    class="logo-panel__nav-item js-scrollScreen"
+                    href="{{ 'portfolio'|page }}"
+                    class="logo-panel__nav-item js-scrollScreen nav-link"
                     >Портфолио</a
                 >
                 <a

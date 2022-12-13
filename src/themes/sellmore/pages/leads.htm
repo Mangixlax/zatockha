@@ -1,6 +1,6 @@
 ##
 title = "Demonstration"
-url = "/"
+url = "/leads"
 layout = "default"
 meta_title = "Welcome"
 
@@ -9,10 +9,11 @@ handle = "Blog\Post"
 
 [resources]
 less[] = "pages/index.less"
+vars[howItsMadeCmsTemplate] = 'cms:cms-page:index.htm'
 ==
 {% set latestPosts = blog.limit(3).get %}
 
-<main class="page-main page-index">
+<main class="page-main page-seo">
     <div class="hero">
         <div class="hero__inner">
             <div class="hero__slider owl-carousel" id="hero-slider">

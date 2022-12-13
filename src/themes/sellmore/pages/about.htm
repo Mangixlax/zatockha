@@ -1,28 +1,239 @@
 ##
+title = "Demonstration"
 url = "/about"
 layout = "default"
-title = "About Page"
-meta_title = "{{ landingPage.title }}"
+meta_title = "Welcome"
 
-[section landingPage]
-handle = "LandingPage"
+[collection blog]
+handle = "Blog\Post"
 
 [resources]
-vars[activeNavLink] = 'about'
-vars[howItsMadeCmsTemplate] = 'cms:cms-page:about.htm'
-vars[howItsMadeTailorBlueprint] = 'tailor:tailor-blueprint:landing/landing-page.yaml'
-vars[howItsMadeTailorContent] = 'entries/landing_page'
+less[] = "pages/index.less"
+vars[howItsMadeCmsTemplate] = 'cms:cms-page:index.htm'
 ==
-{% put headerAfter %}
-    <div class="container">
-        <div class="header-extra text-center">
-            <h1 class="mb-4">Hello! This is October CMS!</h1>
-            <p class="lead">A company proving that making websites is not rocket science.</p>
+{% set latestPosts = blog.limit(3).get %}
+
+<main class="page-main page-about">
+    <div class="breadcrumbs page-about__breadcrumb">
+        <div class="breadcrumbs__inner">
+            <div class="breadcrumbs__contain">
+                <div class="breadcrumbs__item">
+                    <a href="../index.html" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Главная</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">О компании</span>
+                </div>
+            </div>
         </div>
     </div>
-{% endput %}
-<main class="header-flush">
-    {% for block in landingPage.blocks %}
-        {% partial 'blocks/' ~ str_slug(block.type) block=block %}
-    {% endfor %}
+    <div class="hat page-about__hat">
+        <div class="page-contacts__hat-inner">
+            <h1 class="page-contacts__title">О компании</h1>
+        </div>
+    </div>
+    <div class="page-about__about">
+        <div class="page-about__about__inner">
+            <div class="tg page-about__tg">
+                <h3>Команда Sellmore</h3>
+                <p>
+                    Решение современных маркетинговых задач и воплощение
+                    рекламных стратегий требуют комплексного подхода. Поэтому
+                    SellMore - в первую очередь - команда. Опытные
+                    интернет-маркетологи, талантливые дизайнеры, чуткие
+                    аккаунт-менеджеры, меткие SMM специалисты, умелые
+                    верстальщики и программисты, грамотные SEO-копирайтеры.
+                </p>
+                <p>
+                    Команда SellMore понимает цели бизнеса и напрямую
+                    заинтересована в росте и развитии своих клиентов.
+                </p>
+                <h3>Что мы умеем</h3>
+                <p>В нашей компетенции:</p>
+                <ul>
+                    <li>анализ конкурентов;</li>
+                    <li>подробный аудит ваших сайтов;</li>
+                    <li>продвижение товаров и услуг;</li>
+                    <li>привлечение лидов;</li>
+                    <li>создание информационного и продающего контента;</li>
+                    <li>
+                        разработка и воплощение успешных маркетинговых
+                        стратегий;
+                    </li>
+                    <li>улучшение узнаваемости бренда;</li>
+                    <li>управление репутацией в сети Интернет;</li>
+                    <li>и многое другое.</li>
+                </ul>
+                <h3>Почему мы</h3>
+                <p>
+                    Мы любим своё дело и уважаем наших клиентов. При первом
+                    обращении проведем бесплатный
+                    <a href="../audit/index.html">аудит</a>, посвятим вас в
+                    тонкости комплексного интернет-маркетинга, подробно ответим
+                    на все ваши вопросы.
+                </p>
+                <p>
+                    Работа SellMore открыта и прозрачна. Нам нечего скрывать:
+                    каждый этап рекламной кампании мы излагаем в подробном
+                    отчёте с обоснованием и описанием результатов всех
+                    выполненных действий. В работе нам помогают передовые
+                    инструменты интернет-маркетинга, богатый опыт и чувство
+                    прекрасного.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="about-numbers">
+        <div class="about-numbers__inner">
+            <div class="about-numbers__contain">
+                <div class="about-numbers__list">
+                    <div class="about-numbers__col">
+                        <p>с <strong>2008</strong> года</p>
+                        <p>В сфере интернет-маркетинга</p>
+                    </div>
+                    <div class="about-numbers__col">
+                        <p>более <strong>30</strong></p>
+                        <p>Специалистов в штате</p>
+                    </div>
+                    <div class="about-numbers__col">
+                        <p>более <strong>50</strong></p>
+                        <p>Проектов - увеличение продаж</p>
+                    </div>
+                    <div class="about-numbers__col">
+                        <p>цель <strong>№1</strong></p>
+                        <p>Эффективность вашего бизнеса</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="callback-form page-seo__callback-form">
+        <div class="callback-form__inner section-inner">
+            <h2 class="callback-form__title">
+                Свяжитесь с нами <br />
+                и получите бесплатную консультацию
+            </h2>
+            <div class="callback-form__list">
+                <div class="callback-form__description">
+                    <div class="callback-form__description-info">
+                        <div class="callback-form__description-info-block">
+                            <a
+                                href="tel:+74994508575"
+                                class="callback-form__description-phone js-dct-phone"
+                            >
+                                +7 (499) 450-85-75
+                            </a>
+                        </div>
+                        <div class="callback-form__description-info-block">
+                            <a
+                                href="../cdn-cgi/l/email-protection.html#a5cdc0c9c9cae5d6c0c9c9c8cad7c08bd7d0"
+                                class="callback-form__description-mail"
+                                ><span
+                                    class="__cf_email__"
+                                    data-cfemail="2e464b4242416e5d4b424243415c4b005c5b"
+                                    >[email&#160;protected]</span
+                                ></a
+                            >
+                        </div>
+                        <div class="callback-form__description-info-block">
+                            <p class="callback-form__description-address">
+                                107078, г. Москва, ул. Новорязанская, дом 18,
+                                строение 21, этаж П, помещение 25
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="callback-form__form-wrapper">
+                    <form
+                        action="https://sellmore.ru/mailSend/send.php"
+                        method="post"
+                        class="callback-form__form"
+                        id="bottom-form"
+                    >
+                        <input
+                            class="hidden-form_desc"
+                            type="hidden"
+                            name="form_desc"
+                            value="Форма внизу. Страница 'О нас'"
+                        />
+                        <div class="form-in">
+                            <p class="callback-form__txt">
+                                Оставьте заявку на бесплатную консультацию
+                            </p>
+                            <div class="callback-form__form-inner">
+                                <div
+                                    class="callback-form__input-block input-block input-block--on-bg"
+                                >
+                                    <input
+                                        type="text"
+                                        class="input"
+                                        name="name"
+                                        id="callback-form-name1"
+                                        placeholder="Ваше имя*"
+                                    />
+                                </div>
+                                <div
+                                    class="callback-form__input-block input-block input-block--on-bg"
+                                >
+                                    <input
+                                        type="tel"
+                                        class="input js-phone-mask"
+                                        name="phone"
+                                        id="callback-form-phone1"
+                                        placeholder="Телефон*"
+                                    />
+                                </div>
+                                <div
+                                    class="callback-form__input-block input-block input-block--on-bg"
+                                >
+                                    <textarea
+                                        maxlength="500"
+                                        class="textarea"
+                                        name="message"
+                                        id="callback-form-text1"
+                                        placeholder="Сообщение"
+                                        cols="85"
+                                        rows="5"
+                                    ></textarea>
+                                </div>
+                            </div>
+                            <div class="mess callback-form__mess"></div>
+                            <div class="callback-form__recaprcha-wrapper">
+                                <div
+                                    class="g-recaptcha"
+                                    data-sitekey="6Lew_VsUAAAAAODKM2G6PkrWAj01cG6c09AGaaaq"
+                                ></div>
+                                <div class="callback-form__submit">
+                                    <button
+                                        type="submit"
+                                        class="btn callback-form__submit-btn btn--primary btn--large"
+                                    >
+                                        Получить консультацию
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="callback-form__bottom">
+                                <p class="callback-form__notice">
+                                    Нажимая кнопку «Получить консультацию»,
+                                    вы даете согласие на обработку своих
+                                    персональных данных в соответствии
+                                    <a
+                                        href="../policy/index.html"
+                                        target="_blank"
+                                        rel="nofollow"
+                                        >c&nbsp;Политикой&nbsp;конфиденциальности</a
+                                    > 
+                                </p>
+                            </div>
+                        </div>
+                        <p class="fin-mess">
+                            Спасибо, мы свяжемся с вами в ближайшее время
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
