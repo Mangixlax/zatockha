@@ -125,7 +125,74 @@ video {
   vertical-align: baseline
 }
 
+.tg h3,
+.tg>ol>li {
+  padding-left: 0;
+  font-size: 19px
+}
+
+.tg h3:after,
+.tg>ol>li:after {
+  display: none
+}
+
+.tg li,
+.tg p,
+.tg table {
+  font-size: 14px
+}
+
+.tg table td {
+  padding-left: 15px
+}
+
+.tg h1 {
+  font-size: 30px
+}
+
+.tg p+h3 {
+  margin-top: 40px
+}
+
+.tg h3+p {
+  margin-top: 20px
+}
+
+.tg p+ol {
+  margin-top: 40px
+}
+
+.tg h3+ol {
+  margin-top: 22px
+}
+
+.tg li+li {
+  margin-top: 20px
+}
+
+.tg>ol>li p {
+  margin-left: 0
+}
+
+.tg>ol>li table {
+  margin-left: -15px
+}
+
+.tg>ol>li p {
+  margin-top: 25px
+}
+
+.tg>ol>li {
+  margin-top: 40px
+}
+
+.tg>ol>li>ol {
+  margin-left: 0;
+  margin-top: 25px
+}
+
 @media only screen and (max-width:767px) {
+
   .about-numbers__inner,
   .audit-kinds__inner,
   .audit-research__inner,

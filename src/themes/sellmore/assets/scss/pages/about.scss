@@ -1,0 +1,36 @@
+.page-about__hat {
+  padding: 30px 0 30px 0
+}
+
+.page-about__about {
+  padding-bottom: 90px
+}
+
+.tg.page-about__tg h3+p {
+  margin-top: 15px
+}
+
+.tg.page-about__tg p+h3 {
+  margin-top: 40px
+}
+
+.tg.page-about__tg ul+h3 {
+  margin-top: 40px
+}
+
+.tg.page-about__tg p+ul {
+  margin-top: 15px
+}
+
+
+@media only screen and (max-width:959px) {
+  .page-about__hat {
+    padding: 20px 0 20px 0
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .page-about__about {
+    padding-bottom: 50px
+  }
+}

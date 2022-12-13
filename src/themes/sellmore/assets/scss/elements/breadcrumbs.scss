@@ -1,0 +1,70 @@
+.breadcrumbs {
+  padding: 15px 0 15px 0;
+  position: relative;
+  z-index: 40
+}
+
+.breadcrumbs.breadcrumbs--service .breadcrumbs__link .breadcrumbs__text {
+  color: #fff
+}
+
+.breadcrumbs.breadcrumbs--service .breadcrumbs__item:not(:last-child):after {
+  color: #fff
+}
+
+.breadcrumbs.page-about__breadcrumb,
+.breadcrumbs.page-contacts__breadcrumb {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none
+}
+
+.breadcrumbs__contain {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline
+}
+
+.breadcrumbs__link {
+  color: #8ba4b0;
+  text-decoration: none;
+  line-height: 1.2em
+}
+
+.breadcrumbs__link .breadcrumbs__text {
+  color: #1646bb
+}
+
+.breadcrumbs__text {
+  color: #8ba4b0
+}
+
+.breadcrumbs__link,
+.breadcrumbs__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 30px
+}
+
+.breadcrumbs__item:not(:last-child):after {
+  content: '/';
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px
+}
+
+@media (max-width:767px) {
+  .breadcrumbs {
+    padding: 0
+  }
+}
