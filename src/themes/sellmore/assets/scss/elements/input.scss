@@ -1,0 +1,97 @@
+.input,
+.textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  -webkit-transition-property: border, background, color, padding, -webkit-box-shadow;
+  transition-property: border, background, color, padding, -webkit-box-shadow;
+  -o-transition-property: border, background, color, box-shadow, padding;
+  -moz-transition-property: border, background, color, box-shadow, padding, -moz-box-shadow;
+  transition-property: border, background, color, box-shadow, padding;
+  transition-property: border, background, color, box-shadow, padding, -webkit-box-shadow, -moz-box-shadow;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid #d2dbe0
+}
+
+.input:active,
+.input:focus,
+.textarea:active,
+.textarea:focus {
+  outline: 0;
+  border-color: #1646bb
+}
+
+.input:hover,
+.textarea:hover {
+  border-color: #1646bb
+}
+
+.input:disabled,
+.textarea:disabled {
+  border-color: #f0f3f5
+}
+
+input.input {
+  height: 50px;
+  line-height: auto;
+  line-height: initial;
+  padding: 0 20px
+}
+
+input.input.error {
+  border: 1px solid #ff2727 !important
+}
+
+.textarea {
+  line-height: auto;
+  line-height: initial;
+  padding: 20px;
+  resize: none;
+  width: 100%
+}
+
+.input-block__error {
+  display: none;
+  font-size: 14px;
+  margin-top: 10px;
+  color: red
+}
+
+.input-block {
+  position: relative
+}
+
+.input-block.input-block--error .input {
+  border-color: red
+}
+
+.input-block.input-block--error .input-block__error {
+  display: block
+}
+
+.input-block.input-block--on-bg .abs-label {
+  color: #d2dbe0
+}
+
+.abs-label {
+  font-size: 15px;
+  color: #192440
+}
+
+.abs-label:disabled {
+  color: #8ba4b0
+}
+
+.abs-label+.input,
+.abs-label+.textarea {
+  margin-top: 7px
+}

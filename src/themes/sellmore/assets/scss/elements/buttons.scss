@@ -179,3 +179,32 @@ body {
   padding-left: 0 !important;
   padding-right: 0 !important
 }
+
+.btn.btn--outline.about__detailed-btn {
+  width: 175px;
+  margin-left: 30px;
+  color: #263238
+}
+
+.btn.btn--outline.about__detailed-btn:after {
+  border-top-color: #263238;
+  border-right-color: #263238
+}
+
+@media (max-width:767px) {
+  .btn.btn--outline.about__detailed-btn.btn--seo {
+    width: 280px
+  }
+
+  .btn.btn--outline.about__detailed-btn.btn--seo2 {
+    width: 280px
+  }
+}
+
+@media only screen and (max-width:479px) {
+  .btn.btn--outline.about__detailed-btn {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 20px
+  }
+}
