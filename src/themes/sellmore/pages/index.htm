@@ -33,7 +33,7 @@ meta_title = "Welcome"
                                 >хочу SEO + контекст</a
                             >
                             <a
-                                href="context/index.html"
+                                href="{{ 'context'|page }}"
                                 class="btn btn--outline btn--medium hero__detailed-btn"
                                 >подробнее</a
                             >
@@ -89,7 +89,10 @@ meta_title = "Welcome"
             </div>
             <div class="section-inner">
                 <div class="hero-niz">
-                    <img src="images/computer-mouse.png" alt="" />
+                    <img
+                        src="themes/sellmore/assets/images/computer-mouse.png"
+                        alt=""
+                    />
                     <span class="hero-chev1"></span>
                     <span class="hero-chev2"></span>
                 </div>
@@ -198,6 +201,265 @@ meta_title = "Welcome"
                                     перезвоним
                                 </p>
                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services">
+        <div class="services__inner section-inner">
+            <h2 class="services__title section-title">Услуги</h2>
+            <div class="services__contain section-contain">
+                <div class="services__list">
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/seo.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'seo'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">SEO продвижение</p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Вывод сайта на первые позиции в поисковых
+                                системах Яндекс и Google по выбранным запросам
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/smm.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'smm'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">SMM продвижение</p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Продвижение через популярные социальные медиа -
+                                Facebook, Instagram, YouTube, ВК и ОК
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/reputation.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'serm'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">
+                                Управление репутацией в сети
+                            </p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Увеличение лояльности целевой аудиториии через
+                                работу с информационным полем компании
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/kontext.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'context'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">
+                                Контекстная реклама
+                            </p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Продвижение в рекламных сетях Яндекс.Директ и
+                                Google Adwords
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/target.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'target'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">
+                                Таргетированная реклама
+                            </p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Продвижение в популярных социальных сетях
+                                Facebook, Instagram, ВК и ОК
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/media.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'media'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">Медийная реклама</p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Реклама на популярных тематических порталах
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/lid.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'leads'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">Генерация лидов</p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Получение клиентов напрямую из Facebook,
+                                Instagram и Вконтакте
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/analytics.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'audit'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">Аналитика</p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Ищем слабые места площадки, анализируем
+                                конкурентов, разрабатываем план действий.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__col">
+                        <div class="service-card">
+                            <img
+                                src="themes/sellmore/assets/images/service/develop.jpg"
+                                alt=""
+                                class="service-card__img"
+                            />
+                            <a
+                                href="{{ 'sozdanie-saitov'|page }}"
+                                rel="noopener"
+                                class="service-card__link"
+                            ></a>
+                            <p class="service-card__title">Разработка сайтов</p>
+                            <p class="service-card__more-link more-link">
+                                Подробнее >
+                            </p>
+                            <p class="service-card__description">
+                                Создание сайтов, которые приносят деньги
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="about__inner section-inner">
+            <div class="about__contain section-contain">
+                <div class="about__list">
+                    <div class="about__img-wrapper">
+                        <div class="about__img">
+                            <img src="themes/sellmore/assets/images/about.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="about__info">
+                        <h2 class="about__title section-title">О нас</h2>
+                        <div class="about__text tg">
+                            <p>
+                                SellMore предоставляет услуги консалтинга и
+                                SEO-оптимизации сайтов, обеспечивая комплексный
+                                подход к работе. Мы проанализируем ваш сайт и
+                                разработаем эффективную стратегию его
+                                продвижения в поисковых системах.
+                            </p>
+
+                            <p>
+                                Используя передовые инструменты, мы осуществим
+                                успешную раскрутку вашего бизнеса в интернете.
+                                Итогом сотрудничества с нами будет реальное
+                                увеличение звонков и заявок с вашего сайта.
+                            </p>
+                        </div>
+                        <div class="about__more">
+                            <a
+                                href="javascript:void(0)"
+                                class="btn btn--primary btn--medium about__detailed-btn2"
+                                data-modal-form-desc="Блок 'О нас' на главной странице"
+                                data-modal-title="Бесплатный аудит"
+                                data-modal-btn-text="Получить аудит"
+                                data-uk-modal="{target:'#modal-callback'}"
+                                >Получить аудит</a
+                            >
+                            <a
+                                href="{{ 'about'|page }}"
+                                class="btn btn--outline btn--medium about__detailed-btn"
+                                >подробнее</a
+                            >
                         </div>
                     </div>
                 </div>
