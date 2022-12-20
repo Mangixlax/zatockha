@@ -1,0 +1,279 @@
+##
+url = "/novosti/detail/:slug"
+layout = "default"
+title = "Display a News Post"
+meta_title = "{{ blog.title }} - Blog"
+
+[section blog]
+handle = "News\Post"
+entrySlug = "{{ :slug }}"
+
+[resources]
+vars[activeNavLink] = 'blog'
+vars[howItsMadeCmsTemplate] = 'cms:cms-page:blog/post.htm'
+vars[howItsMadeTailorBlueprint] = 'tailor:tailor-blueprint:blog/post.yaml'
+vars[howItsMadeTailorContent] = 'entries/blog_post/{{ blog.id }}'
+==
+{% if blog is empty %}
+    {% do abort(404) %}
+{% endif %}
+
+{% set new = blog %}
+
+<main class="page-main page-seo">
+    <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
+        <div class="breadcrumbs__inner">
+            <div class="breadcrumbs__contain">
+                <div class="breadcrumbs__item">
+                    <a href="../../index.html" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Главная</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <a href="../index.html" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Новости</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">
+                        {{ new.title }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron case__news">
+        <div class="jumbotron__inner">
+            <h1 class="jumbotron__title">
+                 {{ new.title }}
+            </h1>
+        </div>
+    </div>
+    <div class="detail__wrapper">
+        <div class="detail__time">17.12.2018</div>
+        <p>
+            В середине ноября Яндекс представил масштабное обновление поиска.
+            Новый поиск получил имя Андромеда. Большая часть обновлений
+            коснулась трёх аспектов поисковой системы: быстрых ответов, выбора
+            источников и возможности сохранять находки.
+        </p>
+        <p>
+            Благодаря функции “Быстрый ответ”, Яндекс отвечает на вопросы прямо
+            на странице поисковой выдачи. Благодаря этой функции можно быстро
+            получить ответы на различные вопросы от “где сегодня поужинать” до
+            “как долго мы будем отдыхать на новогодних каникулах”. Кроме того, к
+            ответам подключили сервис Яндекс.Знатоки с помощью которого можно
+            задать свой вопрос непосредственно экспертам.
+        </p>
+        <p>
+            В своём блоге разработчики Яндекса упомянули обновление формулы
+            ранжирования. Среди новых факторов: способность сайта решать задачи
+            пользователей, наличие назойливой рекламы, поведенческие факторы.
+            Были добавлены видимые теги, сообщающие о популярности сайта среди
+            пользователей. Это позволит выбрать наиболее удачный источник при
+            поиске информации с помощью Яндекса.
+        </p>
+        <p>
+            Подшитый к поиску сервис Яндекс.Коллекции позволит в один клик
+            сохранять нужные ссылки, изображения, видеоматериалы. В отличие от
+            обычных закладок браузера, Яндекс.Коллекции имеют некоторую
+            социальную составляющую, позволяющую делиться своими коллекциями или
+            подписываться на чужие.
+        </p>
+        <p>
+            Все эти нововведения говорят о том, что на результаты поиска всё
+            большее влияние оказывает вовлечённость пользователей, а топ выдачи
+            - медленно, но верно - наполняется сервисами Яндекса. Это повод
+            максимально плотно интегрировать продвигаемые ресурсы с сервисами
+            Яндекса и вкладываться в качественный контент.
+        </p>
+    </div>
+    <div class="clients__wrapper--gray">
+        <div class="clients__wrapper">
+            <div class="case__similar">Еще новости</div>
+            <a
+                class="news__item"
+                href="../google-obnovil-dizajn-stranicy-poiska/index.html"
+            >
+                <span class="news__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/n6.jpg)"
+                    ></span>
+                    <span class="news__title"
+                        >Google обновил дизайн страницы поиска</span
+                    >
+                </span>
+                <span class="news__wrap">
+                    <span class="news__date">27.12.2018</span>
+                </span>
+            </a>
+            <a
+                class="news__item"
+                href="../rasshirennye-snippety-google/index.html"
+            >
+                <span class="news__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/n7.jpg)"
+                    ></span>
+                    <span class="news__title"
+                        >Google ответит на вопросы расширенными сниппетами</span
+                    >
+                </span>
+                <span class="news__wrap">
+                    <span class="news__date">24.12.2018</span>
+                </span>
+            </a>
+            <a class="news__item" href="../chat-na-stranice-poiska/index.html">
+                <span class="news__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/n9.png)"
+                    ></span>
+                    <span class="news__title"
+                        >Яндекс.Диалог поможет выйти в топ выдачи... или утащит
+                        сайт на дно</span
+                    >
+                </span>
+                <span class="news__wrap">
+                    <span class="news__date">10.12.2018</span>
+                </span>
+            </a>
+        </div>
+        <a
+            href="../index.html"
+            class="btn btn--outline btn--medium about__detailed-btn"
+            >ВСЕ НОВОСТИ</a
+        >
+    </div>
+    <div class="callback-form page-seo__callback-form">
+        <div class="callback-form__inner section-inner">
+            <h2 class="callback-form__title">
+                Свяжитесь с нами <br />
+                и получите бесплатную консультацию
+            </h2>
+            <div class="callback-form__list">
+                <div class="callback-form__description">
+                    <div class="callback-form__description-info">
+                        <div class="callback-form__description-info-block">
+                            <a
+                                href="tel:+74994508575"
+                                class="callback-form__description-phone js-dct-phone"
+                            >
+                                +7 (499) 450-85-75
+                            </a>
+                        </div>
+                        <div class="callback-form__description-info-block">
+                            <a
+                                href="../../cdn-cgi/l/email-protection.html#167e737a7a795665737a7a7b796473386463"
+                                class="callback-form__description-mail"
+                                ><span
+                                    class="__cf_email__"
+                                    data-cfemail="6109040d0d0e2112040d0d0c0e13044f1314"
+                                    >[email&#160;protected]</span
+                                ></a
+                            >
+                        </div>
+                        <div class="callback-form__description-info-block">
+                            <p class="callback-form__description-address">
+                                107078, г. Москва, ул. Новорязанская, дом 18,
+                                строение 21, этаж П, помещение 25
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="callback-form__form-wrapper">
+                    <form
+                        action="https://sellmore.ru/mailSend/send.php"
+                        method="post"
+                        class="callback-form__form"
+                        id="bottom-form"
+                    >
+                        <input
+                            class="hidden-form_desc"
+                            type="hidden"
+                            name="form_desc"
+                            value="Форма внизу. Страница seo"
+                        />
+                        <div class="form-in">
+                            <p class="callback-form__txt">
+                                Оставьте заявку, чтобы получить бесплатный аудит
+                            </p>
+                            <div class="callback-form__form-inner">
+                                <div
+                                    class="callback-form__input-block input-block input-block--on-bg"
+                                >
+                                    <input
+                                        type="text"
+                                        class="input"
+                                        name="name"
+                                        id="callback-form-name1"
+                                        placeholder="Ваше имя*"
+                                    />
+                                </div>
+                                <div
+                                    class="callback-form__input-block input-block input-block--on-bg"
+                                >
+                                    <input
+                                        type="tel"
+                                        class="input js-phone-mask"
+                                        name="phone"
+                                        id="callback-form-phone1"
+                                        placeholder="Телефон*"
+                                    />
+                                </div>
+                                <div
+                                    class="callback-form__input-block input-block input-block--on-bg"
+                                >
+                                    <textarea
+                                        maxlength="500"
+                                        class="textarea"
+                                        name="message"
+                                        id="callback-form-text1"
+                                        placeholder="Сообщение"
+                                        cols="85"
+                                        rows="5"
+                                    ></textarea>
+                                </div>
+                            </div>
+                            <div class="mess callback-form__mess"></div>
+                            <div class="callback-form__recaprcha-wrapper">
+                                <div
+                                    class="g-recaptcha"
+                                    data-sitekey="6Lew_VsUAAAAAODKM2G6PkrWAj01cG6c09AGaaaq"
+                                ></div>
+                                <div class="callback-form__submit">
+                                    <button
+                                        type="submit"
+                                        class="btn callback-form__submit-btn btn--primary btn--large"
+                                    >
+                                        Получить аудит
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="callback-form__bottom">
+                                <p class="callback-form__notice">
+                                    Нажимая кнопку «Получить аудит», вы даете
+                                    согласие на обработку своих персональных
+                                    данных в соответствии
+                                    <a
+                                        href="../../policy/index.html"
+                                        target="_blank"
+                                        rel="nofollow"
+                                        >c&nbsp;Политикой&nbsp;конфиденциальности</a
+                                    > 
+                                </p>
+                            </div>
+                        </div>
+                        <p class="fin-mess">
+                            Спасибо, мы свяжемся с вами в ближайшее время
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
