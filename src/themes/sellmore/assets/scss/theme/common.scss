@@ -321,6 +321,20 @@ video {
   margin-top: 35px
 }
 
+.more-link {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.15px;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none
+}
+
+.more-link.more-link--black {
+  color: #192440
+}
+
 @media only screen and (max-width:767px) {
   .about-numbers__inner,
   .audit-kinds__inner,
@@ -410,6 +424,10 @@ video {
   .tg>ol>li>ol {
     margin-left: 0;
     margin-top: 25px
+  }
+
+  .more-link {
+    font-size: 13px
   }
 }
 
