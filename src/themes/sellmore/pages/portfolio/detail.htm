@@ -25,13 +25,13 @@ vars[howItsMadeTailorContent] = 'entries/blog_post/{{ blog.id }}'
         <div class="breadcrumbs__inner">
             <div class="breadcrumbs__contain">
                 <div class="breadcrumbs__item">
-                    <a href="../../index.html" class="breadcrumbs__link">
+                    <a href="{{ 'index'|page }}" class="breadcrumbs__link">
                         <span class="breadcrumbs__text">Главная</span>
                     </a>
                 </div>
 
                 <div class="breadcrumbs__item">
-                    <a href="../index.html" class="breadcrumbs__link">
+                    <a href="{{ 'index'|page }}" class="breadcrumbs__link">
                         <span class="breadcrumbs__text">Портфолио</span>
                     </a>
                 </div>
@@ -246,7 +246,7 @@ vars[howItsMadeTailorContent] = 'entries/blog_post/{{ blog.id }}'
             </a>
         </div>
         <a
-            href="../index.html"
+            href="{{ 'index'|page }}"
             class="btn btn--outline btn--medium about__detailed-btn"
             >ВСЕ КЕЙСЫ</a
         >
