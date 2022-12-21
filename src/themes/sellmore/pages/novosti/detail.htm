@@ -7,10 +7,15 @@ meta_title = "{{ blog.title }} - Новости"
 handle = "News\Post"
 entrySlug = "{{ :slug }}"
 
+[collection news]
+handle = "News\Post"
+
 ==
 {% if newsPost is empty %}
     {% do abort(404) %}
 {% endif %}
+
+{% set morePosts = news.whereNot('id', newsPost.id).paginate(3) %}
 
 <main class="page-main page-seo">
     <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
@@ -48,65 +53,17 @@ entrySlug = "{{ :slug }}"
         <div class="detail__time">{{ publishedDate | date('d.m.Y') }}</div>
         {{ newsPost.content | raw }}
     </div>
+    {% if morePosts is not empty %}
     <div class="clients__wrapper--gray">
         <div class="clients__wrapper">
             <div class="case__similar">Еще новости</div>
-            <a
-                class="news__item"
-                href="../google-obnovil-dizajn-stranicy-poiska/index.html"
-            >
-                <span class="news__pic-wrap">
-                    <span
-                        class="clients__pic"
-                        style="background-image: url(../../images/n6.jpg)"
-                    ></span>
-                    <span class="news__title"
-                        >Google обновил дизайн страницы поиска</span
-                    >
-                </span>
-                <span class="news__wrap">
-                    <span class="news__date">27.12.2018</span>
-                </span>
-            </a>
-            <a
-                class="news__item"
-                href="../rasshirennye-snippety-google/index.html"
-            >
-                <span class="news__pic-wrap">
-                    <span
-                        class="clients__pic"
-                        style="background-image: url(../../images/n7.jpg)"
-                    ></span>
-                    <span class="news__title"
-                        >Google ответит на вопросы расширенными сниппетами</span
-                    >
-                </span>
-                <span class="news__wrap">
-                    <span class="news__date">24.12.2018</span>
-                </span>
-            </a>
-            <a class="news__item" href="../chat-na-stranice-poiska/index.html">
-                <span class="news__pic-wrap">
-                    <span
-                        class="clients__pic"
-                        style="background-image: url(../../images/n9.png)"
-                    ></span>
-                    <span class="news__title"
-                        >Яндекс.Диалог поможет выйти в топ выдачи... или утащит
-                        сайт на дно</span
-                    >
-                </span>
-                <span class="news__wrap">
-                    <span class="news__date">10.12.2018</span>
-                </span>
-            </a>
+            {% for post in morePosts %}
+                {% partial 'news/post-card' post=post %}
+            {% endfor %}
         </div>
-        <a
-            href="{{ 'index'|page }}"
-            class="btn btn--outline btn--medium about__detailed-btn"
-            >ВСЕ НОВОСТИ</a
-        >
+        <a href="{{ 'novosti/index' | page }}" class="btn btn--outline btn--medium about__detailed-btn">ВСЕ НОВОСТИ</a>
     </div>
+    {% endif %}
     <div class="callback-form page-seo__callback-form">
         <div class="callback-form__inner section-inner">
             <h2 class="callback-form__title">

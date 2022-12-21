@@ -1,0 +1,15 @@
+<a class="news__item" href="{{ 'novosti/detail' | page({ slug: post.slug }) }}">
+    <span class="news__pic-wrap">
+        <span
+            class="clients__pic"
+            style="background-image:url('{{ post.poster.path }}')"
+        ></span>
+        <span class="news__title">
+          {{ post.title }}
+        </span>
+    </span>
+    <span class="news__wrap">
+        {% set publishedDate = post.published_at is not empty ? post.published_at : post.created_at %}
+        <span class="news__date">{{ publishedDate | date('d.m.Y') }}</span>
+    </span>
+</a>

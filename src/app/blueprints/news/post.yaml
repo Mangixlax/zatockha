@@ -1,0 +1,30 @@
+uuid: 21c6da90-294d-4acd-a615-a81a1d1c3554
+handle: News\Post
+type: stream
+name: Новости
+drafts: true
+
+primaryNavigation:
+    label: Новости
+    icon: icon-bookmark
+    order: 130
+
+navigation:
+    icon: icon-bookmark
+    parent: News\Post
+    order: 10
+
+fields:
+    content:
+        tab: Содержимое
+        label: Content
+        type: richeditor
+        span: adaptive
+
+    poster:
+        tab: Управление
+        label: Постер (изображение)
+        type: fileupload
+        mode: image
+        maxFiles: 1
+        span: left

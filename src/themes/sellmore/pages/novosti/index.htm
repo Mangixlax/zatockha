@@ -2,7 +2,12 @@ url = "/novosti"
 layout = "default"
 title = "Новости"
 meta_title = "Welcome"
+
+[collection news]
+handle = "News\Post"
 ==
+{% set posts = news.paginate(5) %}
+
 <main class="page-main page-clients">
     <div class="breadcrumbs page-contacts__breadcrumb">
         <div class="breadcrumbs__inner">
@@ -28,456 +33,9 @@ meta_title = "Welcome"
         </div>
     </div>
     <div class="clients__wrapper">
-        <a class="news__item" href="raznoobrazie-domenov-v-google/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/ggl2.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google разнообразит домены на страницах поисковой
-                    выдачи</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">07.06.2019</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="testirovanie-biblioteki-minus-fraz/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/yan-min.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Яндекс.Директ тестирует новый функционал</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">24.05.2019</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="novye-istochniki-trafika-v-metrike/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/metr.png)"
-                ></span>
-                <span class="news__title"
-                    >Нововведение Яндекс.Метрики позволит точнее отслеживать
-                    источник трафика</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">17.05.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="anonimnost-v-messendzherah/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/mess.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Мессенджеры больше не гарантируют анонимность</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">10.05.2019</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="avtomaticheskuyu-optimizaciyu-direkt/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/yan-dir.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Яндекс.Директ оптимизирет торги за конверсию</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">02.05.2019</span>
-            </span>
-        </a>
-
-        <a
-            class="news__item"
-            href="google-ubral-iz-vydachi-in-depth-articles/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/mart15.png)"
-                ></span>
-                <span class="news__title"
-                    >Google в очередной раз убрал из выдачи in-depth
-                    articles</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">15.03.2019</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="golosovoj-poisk-teryaet-populyarnost/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/mart11.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Stone Temple: Голосовой поиск теряет популярность</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">11.03.2019</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="smena-serp-po-avtomobilnym-zaprosam/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/mart5.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google изменил дизайн выдачи по автомобильной
-                    тематике</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">05.03.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="yandeks-beru/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/beru.jpg)"
-                ></span>
-                <span class="news__title">Яндекс запускает свой Amazon</span>
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">18.02.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="yandeks-praktikum/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/praktikum.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Яндекс осваивает дистанционное обучение</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">15.02.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="suverennyj-internet-rossii/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/internet.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Изоляция Рунета узаконена в первом чтении</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">13.02.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="google-popolnil-byudzhet-rf/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/google-shtraf.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google пополнил бюджет РФ на пятьсот тысяч рублей</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">11.02.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="mail-ru-derzhit-ruku-na-pulse/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/mail-pulse.jpg)"
-                ></span>
-                <span class="news__title">Mail.ru держит руку на "Пульсе"</span>
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">07.02.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="opera-postigla-dzen/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/opera-dzen.jpg)"
-                ></span>
-                <span class="news__title">Opera постигла "Дзен"</span>
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">01.02.2019</span>
-            </span>
-        </a>
-
-        <a
-            class="news__item"
-            href="regulirovanie-rynka-onlajn-prodazh/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/jan5.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Государство приступило к регулированию рынка
-                    онлайн-продаж</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">28.01.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="nekachestvennye-ssylki-google/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/jan4.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google: Ваш сайт - ваша ответственность</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">25.01.2019</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="yandeks-nakazhet-nedobrosovestnyh-vebmasterov/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/jan3.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Яндекс накажет недобросовестных веб-мастеров</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">21.01.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="indeksaciya-mediakontenta/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/jan2.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google: Страницы с изображениями и видео индексируются
-                    одинаково</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">14.01.2019</span>
-            </span>
-        </a>
-        <a class="news__item" href="deindeksaciya-stranic-google/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/jan1.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google: Временный файл sitemap позволит ускорить
-                    деиндексацию страниц, за которые вам стыдно</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">07.01.2019</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="google-obnovil-dizajn-stranicy-poiska/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/n6.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google обновил дизайн страницы поиска</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">27.12.2018</span>
-            </span>
-        </a>
-        <a class="news__item" href="rasshirennye-snippety-google/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/n7.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google ответит на вопросы расширенными сниппетами</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">24.12.2018</span>
-            </span>
-        </a>
-        <a class="news__item" href="andromeda-yandeksa/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/n8.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Операция "Андромеда": обновление Яндекс.Поиска диктует
-                    новые правила SEO</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">17.12.2018</span>
-            </span>
-        </a>
-        <a class="news__item" href="chat-na-stranice-poiska/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/n9.png)"
-                ></span>
-                <span class="news__title"
-                    >Яндекс.Диалог поможет выйти в топ выдачи... или утащит сайт
-                    на дно</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">10.12.2018</span>
-            </span>
-        </a>
-        <a class="news__item" href="tovarnaya-galereya-yandeksa/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/n10.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Рекламодатели Яндекса получили инструмент для привлечения
-                    дополнительного трафика</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">03.12.2018</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="google-o-poslednem-obnovlenii-poiskovyh-algoritmov/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/ggl.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Google о последнем обновлении поисковых алгоритмов</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">26.11.2018</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="novye-rekomendacii-v-diagnostike-sajta/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/yan-ms.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Яндекс выпустил новые рекомендации по диагностике
-                    сайтов</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">19.11.2018</span>
-            </span>
-        </a>
-        <a class="news__item" href="yandeks-uslugi-stali-dostupny/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/yan-ser.jpg)"
-                ></span>
-                <span class="news__title"
-                    >"Яндекс.Услуги" стали доступны для всех</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">15.11.2018</span>
-            </span>
-        </a>
-        <a
-            class="news__item"
-            href="obnovlenie-turbo-stranic-yandeksa/index.html"
-        >
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/turbo.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Обновление турбо-страниц Яндекса для
-                    интернет-магазинов</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">12.11.2018</span>
-            </span>
-        </a>
-        <a class="news__item" href="yandeks-rasshiryaet-snippety/index.html">
-            <span class="news__pic-wrap">
-                <span
-                    class="clients__pic"
-                    style="background-image: url(../images/yan-search.jpg)"
-                ></span>
-                <span class="news__title"
-                    >Яндекс расширяет сниппеты дополнительным контентом</span
-                >
-            </span>
-            <span class="news__wrap">
-                <span class="news__date">05.11.2018</span>
-            </span>
-        </a>
+        {% for post in posts %}
+        {% partial 'news/post-card' post=post %}
+        {% endfor %}
     </div>
 
     <div class="about-numbers">
@@ -509,7 +67,7 @@ meta_title = "Welcome"
             <div class="modal-callback__inner">
                 <span class="modal__close-btn uk-modal-close">
                     <svg class="icon-close modal__icon-close">
-                        <use xlink:href="../images/svg-icons.svg#close" />
+                        <use xlink:href="../images/svg-icons.svg#close"/>
                     </svg>
                 </span>
                 <div class="uk-modal-dialog__contain">
@@ -538,7 +96,7 @@ meta_title = "Welcome"
                                             <label
                                                 for="mobile-callback-name1"
                                                 class="abs-label"
-                                                >Как к вам обращаться?</label
+                                            >Как к вам обращаться?</label
                                             >
                                             <input
                                                 type="text"
@@ -553,7 +111,7 @@ meta_title = "Welcome"
                                             <label
                                                 for="mobile-callback-phone1"
                                                 class="abs-label"
-                                                >Телефон*</label
+                                            >Телефон*</label
                                             >
                                             <input
                                                 type="tel"
@@ -580,26 +138,19 @@ meta_title = "Welcome"
                                         <div class="mess"></div>
                                         <div class="modal-callback__notify">
                                             <p>
-                                                Нажимая кнопку «<i
-                                                    class="modal-callback__notify-btnText"
-                                                    >Получить консультацию</i
-                                                >», вы даете согласие
-                                                на обработку своих персональных
-                                                данных в соответствии с 
+                                                Нажимая кнопку «<i class="modal-callback__notify-btnText">Получить консультацию</i>»,
+                                                вы даете согласие на обработку своих персональных данных в соответствии с
                                                 <a
                                                     href="../policy/index.html"
                                                     rel="nofollow"
                                                     target="_blank"
-                                                    >Политикой
-                                                    конфиденциальности</a
-                                                >
+                                                >Политикой конфиденциальности</a>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <p class="fin-mess">
-                                    Спасибо за заявку, мы вам обязательно
-                                    перезвоним
+                                    Спасибо за заявку, мы вам обязательно перезвоним
                                 </p>
                             </form>
                         </div>
