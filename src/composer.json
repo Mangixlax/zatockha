@@ -20,8 +20,7 @@
         "guzzlehttp/guzzle": "^7.4",
         "ext-fileinfo": "*",
         "symfony/dom-crawler": "^5.3",
-        "zen/robots-plugin": "^1.0",
-        "rainlab/pages-plugin": "^1.5"
+        "zen/robots-plugin": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5|^9.0",
