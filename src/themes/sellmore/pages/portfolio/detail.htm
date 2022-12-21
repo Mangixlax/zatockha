@@ -1,18 +1,12 @@
 ##
-url = "/portfolio/detail/:slug"
+url = "/portfolio/:slug"
 layout = "default"
 title = "Display a Portfolio Post"
 meta_title = "{{ blog.title }} - Blog"
 
 [section blog]
-handle = "News\Post"
 entrySlug = "{{ :slug }}"
 
-[resources]
-vars[activeNavLink] = 'blog'
-vars[howItsMadeCmsTemplate] = 'cms:cms-page:blog/post.htm'
-vars[howItsMadeTailorBlueprint] = 'tailor:tailor-blueprint:blog/post.yaml'
-vars[howItsMadeTailorContent] = 'entries/blog_post/{{ blog.id }}'
 ==
 {% if blog is empty %}
     {% do abort(404) %}
