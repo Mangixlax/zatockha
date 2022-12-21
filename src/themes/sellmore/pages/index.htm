@@ -3,6 +3,7 @@ layout = "default"
 title = "Главная страница"
 meta_title = "Welcome"
 ==
+
 <main class="page-main page-index">
     <div class="hero">
         <div class="hero__inner">
@@ -318,7 +319,10 @@ meta_title = "Welcome"
                 <div class="about__list">
                     <div class="about__img-wrapper">
                         <div class="about__img">
-                            <img src="themes/sellmore/assets/images/about.jpg" alt="" />
+                            <img
+                                src="themes/sellmore/assets/images/about.jpg"
+                                alt=""
+                            />
                         </div>
                     </div>
                     <div class="about__info">
@@ -360,5 +364,6 @@ meta_title = "Welcome"
             </div>
         </div>
     </div>
+    {% partial 'site/numbers' %}
     {% partial 'forms/callback' %}
 </main>
