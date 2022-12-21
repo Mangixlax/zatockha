@@ -1,0 +1,358 @@
+##
+url = "/portfolio/detail/:slug"
+layout = "default"
+title = "Display a Portfolio Post"
+meta_title = "{{ blog.title }} - Blog"
+
+[section blog]
+handle = "News\Post"
+entrySlug = "{{ :slug }}"
+
+[resources]
+vars[activeNavLink] = 'blog'
+vars[howItsMadeCmsTemplate] = 'cms:cms-page:blog/post.htm'
+vars[howItsMadeTailorBlueprint] = 'tailor:tailor-blueprint:blog/post.yaml'
+vars[howItsMadeTailorContent] = 'entries/blog_post/{{ blog.id }}'
+==
+{% if blog is empty %}
+    {% do abort(404) %}
+{% endif %}
+
+{% set new = blog %}
+
+<main class="page-main page-seo">
+    <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
+        <div class="breadcrumbs__inner">
+            <div class="breadcrumbs__contain">
+                <div class="breadcrumbs__item">
+                    <a href="../../index.html" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Главная</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <a href="../index.html" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Портфолио</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">Строительная компания</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron case__house">
+        <div class="jumbotron__inner">
+            <h1 class="jumbotron__title">
+                Кейс по лидогенерации для компании по строительству
+                каркасно-панельных домов
+            </h1>
+            <p class="jumbotron__subtitle">
+                Клиент: строительная компания
+                <br />
+                Услуга:
+                <a
+                    class="case__link case__link--under"
+                    href="../../leads/index.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >лидогенерация</a
+                >
+            </p>
+        </div>
+    </div>
+    <div class="seo-advancement">
+        <div class="seo-advancement__inner">
+            <h2 class="seo-advancement__title section-title">Задача</h2>
+            <div class="seo-advancement__contain section-contain">
+                <div class="seo-advancement__list">
+                    <div class="seo-advancement__col">
+                        <div
+                            class="empty-card seo-advancement__empty-card empty-card--center"
+                        >
+                            <div class="empty-card__icon-wrapper">
+                                <svg class="empty-card__icon">
+                                    <use
+                                        xlink:href="../../images/svg-icons.svg#net"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <p class="empty-card__txt">
+                                Собрать целевые лиды<br />из социальных сетей
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="seo-steps">
+        <div class="seo-steps__inner">
+            <h2 class="seo-steps__title section-title">Решение</h2>
+            <div class="seo-steps__contain section-contain">
+                <div class="numeric-list seo-steps__numeric-list">
+                    <div class="numeric-item">
+                        <span class="numeric-item__num">1</span>
+                        <div class="numeric-item__txt-wrapper">
+                            <p class="numeric-item__title">Анализ</p>
+
+                            <p class="numeric-item_txt">
+                                Проведен анализ объектов клиента и предложены
+                                наиболее релевантные аудитории Facebook и
+                                Instagram
+                            </p>
+                        </div>
+                    </div>
+                    <div class="numeric-item">
+                        <span class="numeric-item__num">2</span>
+                        <div class="numeric-item__txt-wrapper">
+                            <p class="numeric-item__title">Запуск</p>
+
+                            <p class="numeric-item_txt">
+                                На старте проверены несколько релевантных
+                                аудиторий. Далее продолжена работа с наиболее
+                                результативными
+                            </p>
+                        </div>
+                    </div>
+                    <div class="numeric-item">
+                        <span class="numeric-item__num">3</span>
+                        <div class="numeric-item__txt-wrapper">
+                            <p class="numeric-item__title">Контроль</p>
+
+                            <p class="numeric-item_txt">
+                                Налажен простой и понятный онлайн-учет лидов и
+                                звонков и сверки с клиентом, что позволило
+                                оперативно корректировать кампанию и повышать ее
+                                эффективность
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="seo-advancement">
+        <div class="seo-advancement__inner">
+            <h2 class="seo-advancement__title section-title">Результаты</h2>
+            <div class="seo-advancement__contain section-contain">
+                <div class="seo-advancement__list">
+                    <div class="seo-advancement__col">
+                        <div
+                            class="empty-card seo-advancement__empty-card empty-card--center"
+                        >
+                            <div class="empty-card__icon-wrapper">
+                                <svg class="empty-card__icon">
+                                    <use
+                                        xlink:href="../../images/svg-icons.svg#hot-client"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <p class="empty-card__txt">
+                                До <b>25</b> лидов<br />в неделю
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a
+                    href="../../leads/index.html"
+                    class="btn btn--outline btn--medium about__detailed-btn btn--seo2"
+                    >Подробнее о услуге</a
+                >
+            </div>
+        </div>
+    </div>
+    <div class="clients__wrapper--gray">
+        <div class="clients__wrapper">
+            <div class="case__similar">Похожие проекты</div>
+            <a
+                class="clients__item"
+                href="../keys-po-reklame-mikrokreditovanie/index.html"
+            >
+                <span class="clients__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/it14.jpg)"
+                    ></span>
+                    <span class="clients__txt-wrap">
+                        <span class="clients__pic-txt">До 34 заявок</span>
+                        <span class="clients__pic-txt--small">в неделю</span>
+                    </span>
+                </span>
+                <span class="clients__txt"
+                    >Контекстная и таргетированная реклама для
+                    микрокредитования</span
+                >
+            </a>
+            <a
+                class="clients__item"
+                href="../keys-po-reklame-gdeetotdom/index.html"
+            >
+                <span class="clients__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/it6.jpg)"
+                    ></span>
+                    <span class="clients__txt-wrap">
+                        <span class="clients__pic-txt">350%</span>
+                        <span class="clients__pic-txt--small">ROMI</span>
+                    </span>
+                </span>
+                <span class="clients__txt"
+                    >Контекстная и таргетированная реклама для портала
+                    gdeetotdom.ru</span
+                >
+            </a>
+            <a
+                class="clients__item"
+                href="../keys-po-zvonkam-zastroishiki-moskva/index.html"
+            >
+                <span class="clients__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/it8.jpg)"
+                    ></span>
+                    <span class="clients__txt-wrap">
+                        <span class="clients__pic-txt">До 200 звонков</span>
+                        <span class="clients__pic-txt--small"
+                            >в месяц на объект</span
+                        >
+                    </span>
+                </span>
+                <span class="clients__txt"
+                    >Генерация звонков из SMM для застройщиков Москвы и
+                    области</span
+                >
+            </a>
+            <a
+                class="clients__item"
+                href="../keys-po-zvonkam-zastroishiki-ispanii/index.html"
+            >
+                <span class="clients__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/it12.jpg)"
+                    ></span>
+                    <span class="clients__txt-wrap">
+                        <span class="clients__pic-txt">До 150 звонков</span>
+                        <span class="clients__pic-txt--small">в месяц</span>
+                    </span>
+                </span>
+                <span class="clients__txt"
+                    >Генерация звонков для застройщиков Испании</span
+                >
+            </a>
+        </div>
+        <a
+            href="../index.html"
+            class="btn btn--outline btn--medium about__detailed-btn"
+            >ВСЕ КЕЙСЫ</a
+        >
+    </div>
+    <div id="modal-callback" class="uk-modal modal-callback">
+        <div class="uk-modal-dialog modal modal-callback">
+            <div class="modal-callback__inner">
+                <span class="modal__close-btn uk-modal-close">
+                    <svg class="icon-close modal__icon-close">
+                        <use xlink:href="../../images/svg-icons.svg#close" />
+                    </svg>
+                </span>
+                <div class="uk-modal-dialog__contain">
+                    <div class="modal__inner p-rel">
+                        <div class="modal-callback__contain">
+                            <form
+                                action="https://sellmore.ru/mailSend/send.php"
+                                method="post"
+                                class="uk-form modal-callback__form"
+                                id="callback-form"
+                            >
+                                <input
+                                    class="hidden-form_desc"
+                                    type="hidden"
+                                    name="form_desc"
+                                    value=""
+                                />
+                                <div class="form-in">
+                                    <p class="modal-callback__title">
+                                        Бесплатная консультация
+                                    </p>
+                                    <div class="modal-callback__form-inner">
+                                        <div
+                                            class="modal-callback__input-block input-block"
+                                        >
+                                            <label
+                                                for="mobile-callback-name1"
+                                                class="abs-label"
+                                                >Как к вам обращаться?</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="input"
+                                                name="name"
+                                                id="mobile-callback-name1"
+                                            />
+                                        </div>
+                                        <div
+                                            class="modal-callback__input-block input-block"
+                                        >
+                                            <label
+                                                for="mobile-callback-phone1"
+                                                class="abs-label"
+                                                >Телефон*</label
+                                            >
+                                            <input
+                                                type="tel"
+                                                class="input js-phone-mask"
+                                                name="phone"
+                                                id="mobile-callback-phone1"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="modal-callback__bottom">
+                                        <div
+                                            class="g-recaptcha"
+                                            data-sitekey="6Lew_VsUAAAAAODKM2G6PkrWAj01cG6c09AGaaaq"
+                                        ></div>
+                                        <div class="modal-callback__submit">
+                                            <button
+                                                type="submit"
+                                                name="submit"
+                                                class="btn btn--primary btn--medium modal-callback__submit-btn"
+                                            >
+                                                Получить консультацию
+                                            </button>
+                                        </div>
+                                        <div class="mess"></div>
+                                        <div class="modal-callback__notify">
+                                            <p>
+                                                Нажимая кнопку «<i
+                                                    class="modal-callback__notify-btnText"
+                                                    >Получить консультацию</i
+                                                >», вы даете согласие
+                                                на обработку своих персональных
+                                                данных в соответствии с 
+                                                <a
+                                                    href="../../policy/index.html"
+                                                    rel="nofollow"
+                                                    target="_blank"
+                                                    >Политикой
+                                                    конфиденциальности</a
+                                                >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="fin-mess">
+                                    Спасибо за заявку, мы вам обязательно
+                                    перезвоним
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
