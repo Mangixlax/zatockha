@@ -3,16 +3,7 @@ url = "/portfolio/:slug"
 layout = "default"
 title = "Display a Portfolio Post"
 meta_title = "{{ blog.title }} - Blog"
-
-[section blog]
-entrySlug = "{{ :slug }}"
-
 ==
-{% if blog is empty %}
-    {% do abort(404) %}
-{% endif %}
-
-{% set new = blog %}
 
 <main class="page-main page-seo">
     <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
