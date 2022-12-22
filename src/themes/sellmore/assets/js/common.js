@@ -278,18 +278,22 @@
                 v = u.text(),
                 b = f.text();
             $(document).on("click", "[data-uk-modal]", function () {
-                $(this).attr("data-modal-form-desc") &&
-                    $("#callback-form")
-                        .find(".hidden-form_desc")
-                        .val($(this).data("modal-form-desc")),
-                    $(this).attr("data-modal-title") &&
-                        u.html($(this).data("modal-title")),
-                    $(this).attr("data-modal-btn-text") &&
-                        (f.html($(this).data("modal-btn-text")),
-                        p.html($(this).data("modal-btn-text"))),
-                    $(this).attr("data-modal-title") || u.html(v),
-                    $(this).attr("data-modal-btn-text") ||
-                        (f.html(b), p.html(b));
+                if ($(this).attr('data-modal-form-desc')) {
+                    $('#callback-form').find('.hidden-form_desc').val($(this).data('modal-form-desc'));
+                }
+
+                if ($(this).attr("data-modal-title")) {
+                    u.html($(this).data("modal-title"));
+                }
+
+                if ($(this).attr("data-modal-btn-text")) {
+                    f.html($(this).data("modal-btn-text"));
+                    p.html($(this).data("modal-btn-text"));
+                }
+
+                $(this).attr("data-modal-title") || u.html(v)
+
+                $(this).attr("data-modal-btn-text") || (f.html(b), p.html(b));
             }),
                 m.on({
                     "show.uk.modal": function () {
@@ -321,59 +325,7 @@
                                     "#modal-callback .modal-callback__input-block input"
                                 ).val(""));
                     },
-                }),
-                $("form").on("submit", function (e) {
-                    e.preventDefault();
-                    var t = $(this);
-                    if (l.errorList.length > 0 || h.errorList.length > 0)
-                        return !1;
-                    var a = $(this).serialize(),
-                        o = $(this).find(".mess"),
-                        i = $(this).find(".fin-mess"),
-                        n = $(this).find(".form-in");
-                    o.append(
-                        '<img src="/mailSend/preloader.svg" class="preloader" />'
-                    ),
-                        $.ajax({
-                            type: $(this).attr("method"),
-                            url: $(this).attr("action"),
-                            data: a,
-                            success: function (e) {
-                                var a = $.parseJSON(e);
-                                t.hasClass("modal-callback__form") &&
-                                    r.addClass("modal-form-success"),
-                                    "true" == a.success
-                                        ? setTimeout(function () {
-                                              o.stop().hide(200, function () {
-                                                  n.stop().slideUp(300),
-                                                      i
-                                                          .stop()
-                                                          .slideDown(
-                                                              300,
-                                                              function () {
-                                                                  i.addClass(
-                                                                      "visible"
-                                                                  );
-                                                              }
-                                                          );
-                                              }),
-                                                  dataLayer &&
-                                                      dataLayer.push({
-                                                          event: "send-form",
-                                                          eventCategory: t
-                                                              .find(
-                                                                  '[name="form_desc"]'
-                                                              )
-                                                              .val(),
-                                                      });
-                                          }, 700)
-                                        : o.html(a.mess);
-                            },
-                            error: function (e, t) {
-                                alert("Возникла ошибка: " + e.responseCode);
-                            },
-                        });
-                });
+                })
         }),
         e.addEventListener("scroll", function () {
             i();

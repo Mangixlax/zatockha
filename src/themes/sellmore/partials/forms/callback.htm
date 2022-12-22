@@ -1,7 +1,7 @@
 <div class="callback-form page-seo__callback-form">
     <div class="callback-form__inner section-inner">
         <h2 class="callback-form__title">
-            Свяжитесь с нами <br />
+            Свяжитесь с нами <br/>
             и получите бесплатную консультацию
         </h2>
         <div class="callback-form__list">
@@ -9,22 +9,16 @@
                 <div class="callback-form__description-info">
                     <div class="callback-form__description-info-block">
                         <a
-                            href="tel:+74994508575"
+                            href="tel:+79819998954"
                             class="callback-form__description-phone js-dct-phone"
                         >
-                            +7 (499) 450-85-75
+                            +7 (981) 999-89-54
                         </a>
                     </div>
                     <div class="callback-form__description-info-block">
-                        <a
-                            href="../../cdn-cgi/l/email-protection.html#167e737a7a795665737a7a7b796473386463"
-                            class="callback-form__description-mail"
-                            ><span
-                                class="__cf_email__"
-                                data-cfemail="6109040d0d0e2112040d0d0c0e13044f1314"
-                                >[email&#160;protected]</span
-                            ></a
-                        >
+                        <a href="mailto:max@sellmore.ru" class="callback-form__description-mail">
+                            max@sellmore.ru
+                        </a>
                     </div>
                     <div class="callback-form__description-info-block">
                         <p class="callback-form__description-address">
@@ -34,93 +28,8 @@
                     </div>
                 </div>
             </div>
-            <div class="callback-form__form-wrapper">
-                <form
-                    action="https://sellmore.ru/mailSend/send.php"
-                    method="post"
-                    class="callback-form__form"
-                    id="bottom-form"
-                >
-                    <input
-                        class="hidden-form_desc"
-                        type="hidden"
-                        name="form_desc"
-                        value="Форма внизу. Страница seo"
-                    />
-                    <div class="form-in">
-                        <p class="callback-form__txt">
-                            Оставьте заявку, чтобы получить бесплатный аудит
-                        </p>
-                        <div class="callback-form__form-inner">
-                            <div
-                                class="callback-form__input-block input-block input-block--on-bg"
-                            >
-                                <input
-                                    type="text"
-                                    class="input"
-                                    name="name"
-                                    id="callback-form-name1"
-                                    placeholder="Ваше имя*"
-                                />
-                            </div>
-                            <div
-                                class="callback-form__input-block input-block input-block--on-bg"
-                            >
-                                <input
-                                    type="tel"
-                                    class="input js-phone-mask"
-                                    name="phone"
-                                    id="callback-form-phone1"
-                                    placeholder="Телефон*"
-                                />
-                            </div>
-                            <div
-                                class="callback-form__input-block input-block input-block--on-bg"
-                            >
-                                <textarea
-                                    maxlength="500"
-                                    class="textarea"
-                                    name="message"
-                                    id="callback-form-text1"
-                                    placeholder="Сообщение"
-                                    cols="85"
-                                    rows="5"
-                                ></textarea>
-                            </div>
-                        </div>
-                        <div class="mess callback-form__mess"></div>
-                        <div class="callback-form__recaprcha-wrapper">
-                            <div
-                                class="g-recaptcha"
-                                data-sitekey="6Lew_VsUAAAAAODKM2G6PkrWAj01cG6c09AGaaaq"
-                            ></div>
-                            <div class="callback-form__submit">
-                                <button
-                                    type="submit"
-                                    class="btn callback-form__submit-btn btn--primary btn--large"
-                                >
-                                    Получить аудит
-                                </button>
-                            </div>
-                        </div>
-                        <div class="callback-form__bottom">
-                            <p class="callback-form__notice">
-                                Нажимая кнопку «Получить аудит», вы даете
-                                согласие на обработку своих персональных данных
-                                в соответствии
-                                <a
-                                    href="../../policy/index.html"
-                                    target="_blank"
-                                    rel="nofollow"
-                                    >c&nbsp;Политикой&nbsp;конфиденциальности</a
-                                > 
-                            </p>
-                        </div>
-                    </div>
-                    <p class="fin-mess">
-                        Спасибо, мы свяжемся с вами в ближайшее время
-                    </p>
-                </form>
+            <div id="callback-form-bottom" class="callback-form__form-wrapper">
+                {% partial 'forms/callback-form' %}
             </div>
         </div>
     </div>

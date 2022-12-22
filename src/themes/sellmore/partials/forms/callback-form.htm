@@ -1,0 +1,78 @@
+<form
+    data-request="onSendCallbackForm"
+    data-request-update="'forms/callback-form-success': '#callback-form-bottom'"
+    class="callback-form__form"
+    id="bottom-form"
+>
+    <input
+        class="hidden-form_desc"
+        type="hidden"
+        name="form_desc"
+        value="Форма внизу. Страница seo"
+    />
+    <div class="form-in">
+        <p class="callback-form__txt">
+            Оставьте заявку, чтобы получить бесплатный аудит
+        </p>
+        <div class="callback-form__form-inner">
+            <div
+                class="callback-form__input-block input-block input-block--on-bg"
+            >
+                <input
+                    type="text"
+                    class="input"
+                    name="name"
+                    id="callback-form-name1"
+                    placeholder="Ваше имя*"
+                />
+            </div>
+            <div
+                class="callback-form__input-block input-block input-block--on-bg"
+            >
+                <input
+                    type="tel"
+                    class="input js-phone-mask"
+                    name="phone"
+                    id="callback-form-phone1"
+                    placeholder="Телефон*"
+                />
+            </div>
+            <div
+                class="callback-form__input-block input-block input-block--on-bg"
+            >
+                <textarea
+                    maxlength="500"
+                    class="textarea"
+                    name="message"
+                    id="callback-form-text1"
+                    placeholder="Сообщение"
+                    cols="85"
+                    rows="5"
+                ></textarea>
+            </div>
+        </div>
+        <div class="mess callback-form__mess"></div>
+        <div class="callback-form__recaprcha-wrapper">
+            <div class="callback-form__submit">
+                <button
+                    type="submit"
+                    class="btn callback-form__submit-btn btn--primary btn--large"
+                >
+                    Получить аудит
+                </button>
+            </div>
+        </div>
+        <div class="callback-form__bottom">
+            <p class="callback-form__notice">
+                Нажимая кнопку «Получить аудит», вы даете
+                согласие на обработку своих персональных данных
+                в соответствии
+                <a
+                    href="{{ 'policy' | page }}"
+                    target="_blank"
+                    rel="nofollow"
+                >c&nbsp;Политикой&nbsp;конфиденциальности</a>
+            </p>
+        </div>
+    </div>
+</form>

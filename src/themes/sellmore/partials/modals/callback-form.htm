@@ -1,0 +1,75 @@
+<form
+    data-request="onSendCallbackForm"
+    data-request-update="'modals/callback-form-success': '#modal-callback-form'"
+    class="uk-form modal-callback__form"
+    id="callback-form"
+>
+    <input
+        class="hidden-form_desc"
+        type="hidden"
+        name="form_desc"
+        value=""
+    />
+    <div class="form-in">
+        <p class="modal-callback__title">
+            Бесплатная консультация
+        </p>
+        <div class="modal-callback__form-inner">
+            <div
+                class="modal-callback__input-block input-block"
+            >
+                <label
+                    for="mobile-callback-name1"
+                    class="abs-label"
+                >Как к вам обращаться?</label>
+                <input
+                    type="text"
+                    class="input"
+                    name="name"
+                    id="mobile-callback-name1"
+                />
+            </div>
+            <div
+                class="modal-callback__input-block input-block"
+            >
+                <label
+                    for="mobile-callback-phone1"
+                    class="abs-label"
+                >Телефон*</label>
+                <input
+                    type="tel"
+                    class="input js-phone-mask"
+                    name="phone"
+                    id="mobile-callback-phone1"
+                />
+            </div>
+        </div>
+        <div class="modal-callback__bottom">
+            <div class="modal-callback__submit">
+                <button
+                    type="submit"
+                    name="submit"
+                    class="btn btn--primary btn--medium modal-callback__submit-btn"
+                >
+                    Получить консультацию
+                </button>
+            </div>
+            <div class="mess"></div>
+            <div class="modal-callback__notify">
+                <p>
+                    Нажимая кнопку «<i
+                    class="modal-callback__notify-btnText"
+                >Получить консультацию</i
+                >», вы даете согласие на обработку
+                    своих персональных данных
+                    в соответствии с
+                    <a
+                        href="{{ 'policy'|page }}"
+                        rel="nofollow"
+                        target="_blank"
+                    >Политикой конфиденциальности</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</form>

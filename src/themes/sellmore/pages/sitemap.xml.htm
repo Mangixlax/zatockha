@@ -1,0 +1,33 @@
+url = "/sitemap.xml"
+title = "Карта сайта в XML формате"
+
+[resources]
+headers[Content-Type] = 'text/xml'
+==
+public function onStart() {
+    $pages = [
+        'about',
+        'contacts',
+        'context',
+        'index',
+        'leads',
+        'media',
+        'policy',
+        'seo',
+        'serm',
+        'smm',
+        'target',
+        'web-development',
+        'about',
+    ];
+}
+==
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://www.example.com/page1.html</loc>
+        <lastmod>2005-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
