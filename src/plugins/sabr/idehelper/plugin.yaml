@@ -1,0 +1,6 @@
+plugin:
+    name: 'sabr.idehelper::lang.plugin.name'
+    description: 'sabr.idehelper::lang.plugin.description'
+    author: Sabr
+    icon: oc-icon-adjust
+    homepage: ''

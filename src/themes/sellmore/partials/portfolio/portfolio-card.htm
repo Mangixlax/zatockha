@@ -1,15 +1,13 @@
-<a class="clients__item" href="keys-po-seo-gdeetotdom/index.html">
+<a class="clients__item" href="{{ 'portfolio/detail' | page({ slug: work.slug }) }}">
     <span class="clients__pic-wrap">
         <span
             class="clients__pic"
-            style="background-image: url(../images/it19.jpg)"
+            style="background-image: url('{{ work.poster.path }}')"
         ></span>
         <span class="clients__txt-wrap">
-            <span class="clients__pic-txt">ТОП-3 по видимости</span>
-            <span class="clients__pic-txt--small"
-                >по загородной недвижимости</span
-            >
+            <span class="clients__pic-txt">{{ work.card_title | raw }}</span>
+            <span class="clients__pic-txt--small">{{ work.card_subtitle | raw }}</span>
         </span>
     </span>
-    <span class="clients__txt">Продвижение портала gdeetotdom.ru</span>
+    <span class="clients__txt">{{ work.card_text | raw }}</span>
 </a>

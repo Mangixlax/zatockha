@@ -1,12 +1,13 @@
 ##
 description = "Default layout"
 ==
+{% apply spaceless %}
 <!DOCTYPE html>
 <html>
     <head>
         {% partial 'site/meta' %}
     </head>
-    <body class="{{ 'page-'~this.page.id }}">
+    <body class="{{ 'page-' ~ this.page.id }}">
 
         <!-- Header -->
         <header id="layout-header">
@@ -24,15 +25,17 @@ description = "Default layout"
         </footer>
 
         {% partial 'modals/callback' %}
+
+        {% framework extra %}
+        {% scripts %}
+
+        <script src="{{ [
+            'assets/js/vendor.js',
+            'assets/js/common.js',
+            'assets/js/yamap.js',
+        ]|theme }}"></script>
+
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     </body>
 </html>
-<script src="{{ [
-    'assets/js/vendor.js',
-]|theme }}"></script>
-<script src="{{ [
-    'assets/js/common.js',
-]|theme }}"></script>
-
-{% framework extra %}
-{% scripts %}
-</body>
+{% endapply %}

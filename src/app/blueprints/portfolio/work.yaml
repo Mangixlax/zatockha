@@ -1,0 +1,188 @@
+uuid: 7b53e457-2c7c-4272-961e-2310cd130532
+handle: Portfolio\Work
+type: stream
+name: Работы
+drafts: false
+
+navigation:
+    icon: icon-bookmark
+    parent: News\Post
+    order: 10
+
+fields:
+    card_title:
+        tab: Карточка
+        label: Заголовок в карточке
+        commentAbove: "Например: ТОП-3 по видимости"
+        type: text
+        span: left
+
+    poster:
+        tab: Карточка
+        label: Постер (изображение)
+        type: fileupload
+        mode: image
+        maxFiles: 1
+        span: right
+
+    card_subtitle:
+        tab: Карточка
+        label: Подзаголовок в карточке
+        commentAbove: "Например: по загородной недвижимости"
+        type: text
+        span: left
+        column: false
+
+    card_text:
+        tab: Карточка
+        label: Кратко о проведенной работе
+        commentAbove: "Например: Продвижение портала ... Контекстная и таргетинговая реклама для портала..."
+        type: text
+        span: left
+        column: false
+
+    client:
+        tab: Общее
+        label: Клиент
+        commentAbove: "Например: магазин готовых ремонтов"
+        type: text
+        span: left
+        column: false
+
+    background:
+        tab: Общее
+        label: Изображение на фоне детальной страницы
+        type: fileupload
+        mode: image
+        maxFiles: 1
+        span: right
+        column: false
+
+    site:
+        tab: Общее
+        label: Ссылка на сайт с https://
+        commentAbove: "Например: https://google.com"
+        type: text
+        span: left
+        column: false
+
+    services:
+        tab: Общее
+        label: Услуги
+        commentAbove: "Выберите страницы услуг, выполненные в данной работе"
+        span: left
+        column: false
+        type: repeater
+        form:
+            fields:
+                page:
+                    label: Страница услуги
+                    type: dropdown
+                    options: \Sabr\Toolbox\Helpers\FormHelper::getOptionsServicePages
+
+    tasks:
+        tab: Список задач
+        label: Список задач
+        type: repeater
+        span: full
+        column: false
+        form:
+            fields:
+                icon:
+                    label: Иконка
+                    type: dropdown
+                    options:
+                        comp-graph: comp-graph
+                        block: block
+                        binoculars: binoculars
+                        borodach: borodach
+                        ca: ca
+                        chart: chart
+                        clients: clients
+                        close: close
+                        corp: corp
+                        diamond: diamond
+                        hot-client: hot-client
+                        int-store: int-store
+                        loyal: loyal
+                        media: media
+                        microscope: microscope
+                        money: money
+                        net: net
+                        photoapparat: photoapparat
+                        print: print
+                        prodvigh: prodvigh
+                        promo: promo
+                        reputation: reputation
+                        research: research
+                        rupor: rupor
+                        search: search
+                        search-man: search-man
+                        visitka: visitka
+                        zayavki: zayavki
+                        zayavki-s-sayta: zayavki-s-sayta
+                title:
+                    label: Заголовок
+                    type: text
+
+    solutions:
+        tab: Решения
+        label: Список решений
+        type: repeater
+        span: full
+        column: false
+        form:
+            fields:
+                title:
+                    label: Заголовок
+                    type: text
+                content:
+                    label: Описание под заголовком
+                    type: richeditor
+                    size: large
+
+    results:
+        tab: Результаты
+        label: Список результатов
+        type: repeater
+        span: full
+        column: false
+        form:
+            fields:
+                icon:
+                    label: Иконка
+                    type: dropdown
+                    options:
+                        comp-graph: comp-graph
+                        block: block
+                        binoculars: binoculars
+                        borodach: borodach
+                        ca: ca
+                        chart: chart
+                        clients: clients
+                        close: close
+                        corp: corp
+                        diamond: diamond
+                        hot-client: hot-client
+                        int-store: int-store
+                        loyal: loyal
+                        media: media
+                        microscope: microscope
+                        money: money
+                        net: net
+                        photoapparat: photoapparat
+                        print: print
+                        prodvigh: prodvigh
+                        promo: promo
+                        reputation: reputation
+                        research: research
+                        rupor: rupor
+                        search: search
+                        search-man: search-man
+                        visitka: visitka
+                        zayavki: zayavki
+                        zayavki-s-sayta: zayavki-s-sayta
+                content:
+                    label: Краткое описание под иконкой
+                    type: richeditor
+                    size: large

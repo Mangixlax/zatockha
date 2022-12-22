@@ -1,89 +1,31 @@
 <meta charset="utf-8" />
-<title>
-    October CMS - {{ this.page.meta_title ?: placeholder('pageTitle') }}
-</title>
-<meta name="description" content="{{ this.page.meta_description }}" />
-<meta name="title" content="{{ this.page.meta_title }}" />
-<meta name="author" content="October CMS" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="generator" content="October CMS" />
-<link
-    rel="apple-touch-icon"
-    href="{{ 'assets/images/favicon/fav128x128.png'|theme }}"
-    sizes="128x128"
-/>
-<link
-    rel="apple-touch-icon"
-    href="{{ 'assets/images/favicon/fav64x64.png'|theme }}"
-    sizes="64x64"
-/>
-<link
-    rel="apple-touch-icon"
-    href="{{ 'assets/images/favicon/fav48x48.png'|theme }}"
-    sizes="48x48"
-/>
-<link
-    rel="apple-touch-icon"
-    href="{{ 'assets/images/favicon/fav32x32.png'|theme }}"
-    sizes="32x32"
-/>
-<link
-    rel="apple-touch-icon"
-    href="{{ 'assets/images/favicon/fav16x16.png'|theme }}"
-    sizes="16x16"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="{{ 'assets/images/favicon/fav128x128.png'|theme }}"
-    sizes="128x128"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="{{ 'assets/images/favicon/fav64x64.png'|theme }}"
-    sizes="64x64"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="{{ 'assets/images/favicon/fav48x48.png'|theme }}"
-    sizes="48x48"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="../images/favicon/fav32x32.png"
-    href="{{ 'assets/images/favicon/fav32x32.png'|theme }}"
-    sizes="32x32"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="{{ 'assets/images/favicon/fav16x16.png'|theme }}"
-    sizes="16x16"
-/>
-<link href="{{ ['assets/scss/theme.scss']|theme }}" rel="stylesheet" />
-{% styles %}
-<link
-    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&amp;subset=cyrillic"
-    rel="stylesheet"
-/>
-{% styles %}
-<script
-    src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
-    type="text/javascript"
-></script>
-<script src="{{ 'assets/js/vendor.js'|theme }}"></script>
-<script src="{{ 'assets/js/common.js'|theme }}" async></script>
-<script src="{{ 'assets/js/yamap.js'|theme }}"></script>
-{% framework extras %} {% scripts %}
-<script type="module">
-    import PhotoSwipeLightbox from "{{ 'assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js'|theme }}";
-    import PhotoSwipeModule from "{{ 'assets/vendor/photoswipe/photoswipe.esm.min.js'|theme }}";
-    import PhotoSwipeDynamicCaption from "{{ 'assets/vendor/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js'|theme }}";
 
-    window.PhotoSwipeLightbox = PhotoSwipeLightbox;
-    window.PhotoSwipeModule = PhotoSwipeModule;
-    window.PhotoSwipeDynamicCaption = PhotoSwipeDynamicCaption;
-</script>
+<title>{{ this.page.meta_title ?: placeholder('pageTitle') }} - Sellmore</title>
+
+<meta name="title" content="{{ page.meta_title }}" />
+<meta name="description" content="{{ page.meta_description }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{%- set icons = [
+    { href: 'assets/images/favicon/fav128x128.png', sizes: '128x128' },
+    { href: 'assets/images/favicon/fav64x64.png', sizes: '64x64' },
+    { href: 'assets/images/favicon/fav48x48.png', sizes: '48x48' },
+    { href: 'assets/images/favicon/fav32x32.png', sizes: '32x32' },
+    { href: 'assets/images/favicon/fav32x32.png', sizes: '32x32' },
+    { href: 'assets/images/favicon/fav32x32.png', sizes: '32x32' },
+] -%}
+{%- for icon in icons -%}
+    <link rel="apple-touch-icon" href="{{ icon.href | theme }}" sizes="{{ icon.sizes }}">
+{%- endfor -%}
+{%- for icon in icons -%}
+    <link rel="icon" type="image/png" href="{{ icon.href | theme }}" sizes="{{ icon.sizes }}">
+{%- endfor -%}
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet" />
+
+{% styles %}
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&amp;subset=cyrillic" rel="stylesheet"/>

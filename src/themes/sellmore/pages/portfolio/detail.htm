@@ -1,155 +1,158 @@
-##
 url = "/portfolio/:slug"
 layout = "default"
-title = "Display a Portfolio Post"
-meta_title = "{{ blog.title }} - Blog"
+title = "Детальная страница портфолио"
+meta_title = "{{ portfolioWork.title }}"
+
+[section portfolioWork]
+handle = "Portfolio\Work"
+entrySlug = "{{ :slug }}"
+
+[collection portfolioWorks]
+handle = "Portfolio\Work"
 ==
+function onStart() {
+    $this['formHelper'] = new \Sabr\Toolbox\Helpers\FormHelper;
+}
+==
+{% if portfolioWork is empty %}
+    {% do abort(404) %}
+{% endif %}
+
+{% set firstServiceInWork = null %}
+
+{% if portfolioWork.services is not empty %}
+    {% set firstServiceInWork = formHelper.getServicePage(portfolioWork.services[0].page) %}
+{% endif %}
 
 <main class="page-main page-seo">
     <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
         <div class="breadcrumbs__inner">
             <div class="breadcrumbs__contain">
                 <div class="breadcrumbs__item">
-                    <a href="{{ 'index'|page }}" class="breadcrumbs__link">
+                    <a href="{{ 'index' | page }}" class="breadcrumbs__link">
                         <span class="breadcrumbs__text">Главная</span>
                     </a>
                 </div>
 
                 <div class="breadcrumbs__item">
-                    <a href="{{ 'portfolio'|page }}" class="breadcrumbs__link">
+                    <a href="{{ 'portfolio/index' | page }}" class="breadcrumbs__link">
                         <span class="breadcrumbs__text">Портфолио</span>
                     </a>
                 </div>
 
                 <div class="breadcrumbs__item">
-                    <span class="breadcrumbs__text">Строительная компания</span>
+                    <span class="breadcrumbs__text">{{ portfolioWork.title }}</span>
                 </div>
             </div>
         </div>
     </div>
-    <div class="jumbotron case__house">
+    <div class="jumbotron"{{ portfolioWork.background ? ("style='background-image: url(" ~ portfolioWork.background.path ~ ")'") | raw : '' }}>
         <div class="jumbotron__inner">
             <h1 class="jumbotron__title">
-                Кейс по лидогенерации для компании по строительству
-                каркасно-панельных домов
+                {{ portfolioWork.title }}
             </h1>
             <p class="jumbotron__subtitle">
-                Клиент: строительная компания
+                Клиент: {{ portfolioWork.client }}
+                <br />
+                Сайт:
+                <a
+                   class="case__link case__link--under"
+                   href="{{ portfolioWork.site }}"
+                   rel="nofollow"
+                   target="_blank">{{ portfolioWork.site | replace({ 'https://': '', 'http://': '' }) }}</a>
                 <br />
                 Услуга:
+                {% for service in portfolioWork.services %}
+                {% set servicePage = formHelper.getServicePage(service.page) %}
                 <a
                     class="case__link case__link--under"
-                    href="../../leads/index.html"
+                    href="{{ service.page | page }}"
                     rel="nofollow"
                     target="_blank"
-                    >лидогенерация</a
-                >
+                >{{ servicePage.title }}{% if not loop.last %}, {% endif %}</a>
+                {% endfor %}
             </p>
         </div>
     </div>
+
+    {% if portfolioWork.tasks is not empty %}
     <div class="seo-advancement">
         <div class="seo-advancement__inner">
             <h2 class="seo-advancement__title section-title">Задача</h2>
             <div class="seo-advancement__contain section-contain">
                 <div class="seo-advancement__list">
+                    {% for task in portfolioWork.tasks %}
                     <div class="seo-advancement__col">
-                        <div
-                            class="empty-card seo-advancement__empty-card empty-card--center"
-                        >
+                        <div class="empty-card seo-advancement__empty-card empty-card--center">
                             <div class="empty-card__icon-wrapper">
                                 <svg class="empty-card__icon">
-                                    <use
-                                        xlink:href="../../images/svg-icons.svg#net"
-                                    ></use>
+                                    <use xlink:href="{{ 'assets/images/svg-icons.svg' | theme }}#{{ task.icon }}"></use>
                                 </svg>
                             </div>
-                            <p class="empty-card__txt">
-                                Собрать целевые лиды<br />из социальных сетей
-                            </p>
+                            <div class="empty-card__txt">{{ task.title | raw }}</div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+    {% endif %}
 
+    {% if portfolioWork.solutions is not empty %}
     <div class="seo-steps">
         <div class="seo-steps__inner">
             <h2 class="seo-steps__title section-title">Решение</h2>
             <div class="seo-steps__contain section-contain">
                 <div class="numeric-list seo-steps__numeric-list">
+                    {% for solution in portfolioWork.solutions %}
                     <div class="numeric-item">
-                        <span class="numeric-item__num">1</span>
+                        <span class="numeric-item__num">{{ loop.index }}</span>
                         <div class="numeric-item__txt-wrapper">
-                            <p class="numeric-item__title">Анализ</p>
-
-                            <p class="numeric-item_txt">
-                                Проведен анализ объектов клиента и предложены
-                                наиболее релевантные аудитории Facebook и
-                                Instagram
-                            </p>
+                            <p class="numeric-item__title">{{ solution.title | raw }}</p>
+                            <p class="numeric-item_txt">{{ solution.content | raw }}</p>
                         </div>
                     </div>
-                    <div class="numeric-item">
-                        <span class="numeric-item__num">2</span>
-                        <div class="numeric-item__txt-wrapper">
-                            <p class="numeric-item__title">Запуск</p>
-
-                            <p class="numeric-item_txt">
-                                На старте проверены несколько релевантных
-                                аудиторий. Далее продолжена работа с наиболее
-                                результативными
-                            </p>
-                        </div>
-                    </div>
-                    <div class="numeric-item">
-                        <span class="numeric-item__num">3</span>
-                        <div class="numeric-item__txt-wrapper">
-                            <p class="numeric-item__title">Контроль</p>
-
-                            <p class="numeric-item_txt">
-                                Налажен простой и понятный онлайн-учет лидов и
-                                звонков и сверки с клиентом, что позволило
-                                оперативно корректировать кампанию и повышать ее
-                                эффективность
-                            </p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+    {% endif %}
+
+    {% if portfolioWork.results is not empty %}
     <div class="seo-advancement">
         <div class="seo-advancement__inner">
             <h2 class="seo-advancement__title section-title">Результаты</h2>
             <div class="seo-advancement__contain section-contain">
                 <div class="seo-advancement__list">
+                    {% for resultItem in portfolioWork.results %}
                     <div class="seo-advancement__col">
-                        <div
-                            class="empty-card seo-advancement__empty-card empty-card--center"
-                        >
+                        <div class="empty-card seo-advancement__empty-card empty-card--center">
                             <div class="empty-card__icon-wrapper">
                                 <svg class="empty-card__icon">
-                                    <use
-                                        xlink:href="../../images/svg-icons.svg#hot-client"
-                                    ></use>
+                                    <use xlink:href="{{ 'assets/images/svg-icons.svg' | theme }}#{{ resultItem.icon }}"></use>
                                 </svg>
                             </div>
-                            <p class="empty-card__txt">
-                                До <b>25</b> лидов<br />в неделю
-                            </p>
+                            <div class="empty-card__txt">{{ resultItem.content | raw }}</div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
+                {% if firstServiceInWork %}
                 <a
-                    href="../../leads/index.html"
+                    href="{{ firstServiceInWork.baseFileName | page }}"
                     class="btn btn--outline btn--medium about__detailed-btn btn--seo2"
-                    >Подробнее о услуге</a
-                >
+                    title="Услуга - {{ firstServiceInWork.meta_title }}"
+                >Подробнее об услуге</a>
+                {% endif %}
             </div>
         </div>
     </div>
-    <div class="clients__wrapper--gray">
+    {% endif %}
+
+    {# @TODO Добавить похожие проекты #}
+    {# <div class="clients__wrapper--gray">
         <div class="clients__wrapper">
             <div class="case__similar">Похожие проекты</div>
             <a
@@ -206,10 +209,7 @@ meta_title = "{{ blog.title }} - Blog"
                         >
                     </span>
                 </span>
-                <span class="clients__txt"
-                    >Генерация звонков из SMM для застройщиков Москвы и
-                    области</span
-                >
+                <span class="clients__txt">Генерация звонков из SMM для застройщиков Москвы иобласти</span>
             </a>
             <a
                 class="clients__item"
@@ -231,9 +231,9 @@ meta_title = "{{ blog.title }} - Blog"
             </a>
         </div>
         <a
-            href="{{ 'index'|page }}"
+            href="{{ 'index' | page }}"
             class="btn btn--outline btn--medium about__detailed-btn"
             >ВСЕ КЕЙСЫ</a
         >
-    </div>
+    </div>#}
 </main>

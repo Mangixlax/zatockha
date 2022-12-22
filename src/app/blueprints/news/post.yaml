@@ -2,10 +2,10 @@ uuid: 21c6da90-294d-4acd-a615-a81a1d1c3554
 handle: News\Post
 type: stream
 name: Новости
-drafts: true
+drafts: false
 
 primaryNavigation:
-    label: Новости
+    label: Каталог
     icon: icon-bookmark
     order: 130
 

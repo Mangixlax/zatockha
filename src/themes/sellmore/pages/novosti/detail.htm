@@ -1,7 +1,7 @@
 url = "/novosti/:slug"
 layout = "default"
 title = "Детальная страница новости"
-meta_title = "{{ blog.title }} - Новости"
+meta_title = "{{ newsPost.title }} - Новости"
 
 [section newsPost]
 handle = "News\Post"
@@ -9,7 +9,6 @@ entrySlug = "{{ :slug }}"
 
 [collection news]
 handle = "News\Post"
-
 ==
 {% if newsPost is empty %}
     {% do abort(404) %}
@@ -28,15 +27,13 @@ handle = "News\Post"
                 </div>
 
                 <div class="breadcrumbs__item">
-                    <a href="{{ 'novosti'|page }}" class="breadcrumbs__link">
+                    <a href="{{ 'novosti/index' | page }}" class="breadcrumbs__link">
                         <span class="breadcrumbs__text">Новости</span>
                     </a>
                 </div>
 
                 <div class="breadcrumbs__item">
-                    <span class="breadcrumbs__text">
-                        {{ newsPost.title }}
-                    </span>
+                    <span class="breadcrumbs__text">{{ newsPost.title }}</span>
                 </div>
             </div>
         </div>

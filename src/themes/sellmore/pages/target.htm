@@ -1,9 +1,11 @@
 url = "/target"
 layout = "default"
 title = "Таргетированная реклама"
-meta_title = "Targeting"
-==
+meta_title = "Таргетированная реклама"
 
+[resources]
+vars[isService] = 'target'
+==
 <main class="page-main page-seo">
     <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
         <div class="breadcrumbs__inner">
@@ -15,9 +17,7 @@ meta_title = "Targeting"
                 </div>
 
                 <div class="breadcrumbs__item">
-                    <span class="breadcrumbs__text"
-                        >Таргетированная реклама</span
-                    >
+                    <span class="breadcrumbs__text">Таргетированная реклама</span>
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@ meta_title = "Targeting"
                             <div class="empty-card__icon-wrapper">
                                 <svg class="empty-card__icon">
                                     <use
-                                        
+
                                         xlink:href="{{ 'assets/images/svg-icons.svg#ca'|theme }}"
                                     ></use>
                                 </svg>

@@ -1,12 +1,12 @@
 url = "/novosti"
 layout = "default"
 title = "Новости"
-meta_title = "Welcome"
+meta_title = "Новости"
 
 [collection news]
 handle = "News\Post"
 ==
-{% set posts = news.paginate(5) %}
+{% set posts = news.get() %}
 
 <main class="page-main page-clients">
     <div class="breadcrumbs page-contacts__breadcrumb">
@@ -34,7 +34,7 @@ handle = "News\Post"
     </div>
     <div class="clients__wrapper">
         {% for post in posts %}
-        {% partial 'news/post-card' post=post %}
+            {% partial 'news/post-card' post=post %}
         {% endfor %}
     </div>
     {% partial 'site/numbers' %}

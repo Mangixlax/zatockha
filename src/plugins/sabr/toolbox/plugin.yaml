@@ -1,0 +1,6 @@
+plugin:
+    name: 'sabr.toolbox::lang.plugin.name'
+    description: 'sabr.toolbox::lang.plugin.description'
+    author: Sabr
+    icon: oc-icon-adjust
+    homepage: ''
