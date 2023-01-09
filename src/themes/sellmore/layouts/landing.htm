@@ -1,0 +1,13 @@
+##
+description = "Landing layout"
+==
+function onSendCallbackForm()
+{
+    $inputs = \Request::only(['form_desc', 'name', 'phone', 'message']);
+    \Sabr\Toolbox\Classes\TelegramSender::sendMessage($inputs);
+}
+==
+{% apply spaceless %}
+<!DOCTYPE html>
+{% page %}
+{% endapply %}
