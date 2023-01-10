@@ -30,7 +30,7 @@ class TelegramSender
                 $message .= "\n<b>Со страницы</b>: " . Request::url();
                 $tgMessage = $message;
 
-                file_get_contents("https://api.telegram.org/bot${$tgToken}/sendMessage?chat_id={$tgChannel}&parse_mode=HTML&text=" . urlencode($tgMessage));
+                file_get_contents("https://api.telegram.org/bot{$tgToken}/sendMessage?chat_id={$tgChannel}&parse_mode=HTML&text=" . urlencode($tgMessage));
             }
         }
     }
