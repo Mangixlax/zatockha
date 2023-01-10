@@ -1,0 +1,909 @@
+url = "/spain"
+layout = "landing"
+title = "TerraSun"
+meta_title = "TerraSun"
+
+[resources]
+vars[isService] = 'target'
+==
+
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>TerraSun</title>
+        <meta
+            content="Агентство недвижимости Terrasun. Выбор недвижимости на испанском побережье по самым выгодным ценам. Юридическое сопровождение сделок с недвижимостью"
+            name="description"
+        />
+        <meta content="" name="keywords" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="telephone=no" name="format-detection" />
+        <meta name="HandheldFriendly" content="true" />
+
+        <!--[if (gt IE 9)|!(IE)]><!-->
+        <link
+            href="{{ ['assets/scss/landing/spain.scss'] | theme }}"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!--<![endif]-->
+        <meta property="og:title" content="TerraSun" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="300" />
+        <meta property="twitter:description" content="" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;subset=cyrillic"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic"
+            rel="stylesheet"
+        />
+        <link rel="apple-touch-icon" href="{{ 'assets/images/landing/spain/favicon.png' | theme }}" sizes="64x64">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/landing/spain/favicon.png' | theme }}" sizes="64x64">
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] =
+                    m[i] ||
+                    function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                    };
+                m[i].l = 1 * new Date();
+                (k = e.createElement(t)),
+                    (a = e.getElementsByTagName(t)[0]),
+                    (k.async = 1),
+                    (k.src = r),
+                    a.parentNode.insertBefore(k, a);
+            })(
+                window,
+                document,
+                "script",
+                "../../mc.yandex.ru/metrika/tag.js",
+                "ym"
+            );
+
+            ym(53763049, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+            });
+        </script>
+        <noscript
+            ><div>
+                <img
+                    src="https://mc.yandex.ru/watch/53763049"
+                    style="position: absolute; left: -9999px"
+                    alt=""
+                /></div
+        ></noscript>
+        <!-- /Yandex.Metrika counter -->
+        <!-- Facebook Pixel Code -->
+        <script>
+            !(function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod
+                        ? n.callMethod.apply(n, arguments)
+                        : n.queue.push(arguments);
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = "2.0";
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s);
+            })(
+                window,
+                document,
+                "script",
+                "../../connect.facebook.net/en_US/fbevents.js"
+            );
+            fbq("init", "2205222196272200");
+            fbq("track", "PageView");
+        </script>
+        <noscript
+            ><img
+                height="1"
+                width="1"
+                style="display: none"
+                src="https://www.facebook.com/tr?id=2205222196272200&amp;ev=PageView&amp;noscript=1"
+        /></noscript>
+        <!-- End Facebook Pixel Code -->
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__mobile-logo"></div>
+            <div class="header__btn">
+                <div class="header__line header__line--1"></div>
+                <div class="header__line header__line--2"></div>
+                <div class="header__line header__line--3"></div>
+            </div>
+            <div class="header__nav">
+                <a class="header__nav-link" href="#block1"
+                    ><span>Инвестиции </span><span>в недвижимость</span></a
+                ><a class="header__nav-link" href="#block2"
+                    ><span>Недвижимость</span><span>в Испании</span></a
+                >
+                <div class="header__logo">
+                    <img src="{{ 'assets/images/landing/spain/logo1.png' | theme }}" alt="logo" />
+                </div>
+                <a class="header__nav-link" href="#block3"
+                    ><span>Покупка недвижимости</span><span>и ипотека</span></a
+                ><a class="header__nav-link" href="#block4"
+                    ><span>Вид </span><span>на жительство</span></a
+                >
+                <div class="header__close"></div>
+            </div>
+        </header>
+        <main class="main">
+            <div
+                class="block1"
+                style="background-image: url('themes/sellmore/assets/images/landing/spain/b1.jpg')"
+            >
+                <div class="block1__title-container">
+                    <h1 class="block1__title">
+                        <span>Агентство недвижимости</span><span>Terrasun</span>
+                    </h1>
+                </div>
+                <div class="block1__video-container">
+                    <video autoplay="autoplay" loop="loop" muted="muted">
+                        <source
+                            src="{{ 'assets/images/landing/spain/video.mp4' | theme }}"
+                            type="video/mp4"
+                        />
+                    </video>
+                </div>
+                <div class="block1__wrapper">
+                    <div class="block1__col-wrapper">
+                        <div class="block1__col">
+                            <p>
+                                Выбор недвижимости на испанском побережье по
+                                самым выгодным ценам
+                            </p>
+                        </div>
+                        <div class="block1__col">
+                            <p>
+                                Юридическое сопровождение сделок с недвижимостью
+                            </p>
+                        </div>
+                        <div class="block1__col">
+                            <p>
+                                Помощь в получении вида на жительство в Испании
+                            </p>
+                        </div>
+                        <div class="block1__col">
+                            <button
+                                class="btn block1__btn"
+                                type="button"
+                                onclick="ym(53763049, 'reachGoal', 'cons1'); return true;"
+                            >
+                                ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block1__info">
+                <div class="block1__info-wrapper">
+                    <div class="block1__txt">
+                        Компания Terrasun — официальный член ассоциаций PROVIA ,
+                        API , AIPP
+                    </div>
+                    <div class="block1__picture-container">
+                        <img src="{{ 'assets/images/landing/spain/b1-logo.png' | theme }}" alt="logo" />
+                        <img src="{{ 'assets/images/landing/spain/api.png' | theme }}" alt="logo" />
+                        <img src="{{ 'assets/images/landing/spain/logo2.png' | theme }}" alt="logo" />
+                    </div>
+                </div>
+            </div>
+            <div class="block2" id="block1">
+                <div class="container">
+                    <h2>Инвестиции в недвижимость</h2>
+                    <div class="block2__p-wrapper">
+                        <p>
+                            Приобретение недвижимости в Испании — это выгодное
+                            вложение средств. Цена на недвижимость в Испании
+                            стабильно растет. Вы можете сдавать дом в аренду в
+                            пляжный сезон и получать стабильный доход. Или
+                            получить доход от продажи при изменении рыночной
+                            стоимости.
+                        </p>
+                    </div>
+                </div>
+                <div class="block2__link-wrapper">
+                    <div
+                        class="block2__link"
+                        style="
+                            background-image: url('themes/sellmore/assets/images/landing/spain/2b1.jpg')
+                        "
+                    >
+                        <div class="block2__link-content">
+                            <p>
+                                Предоставим финансовую консультацию и
+                                сопровождение при продаже недвижимости
+                            </p>
+                            <span class="block2__mobile-txt"
+                                >Поможем сдать в аренду вашу недвижимость</span
+                            >
+                            <button
+                                class="btn block2__btn"
+                                type="button"
+                                onclick="ym(53763049, 'reachGoal', 'cons2'); return true;"
+                            >
+                                ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="block2__link"
+                        style="
+                            background-image: url('themes/sellmore/assets/images/landing/spain/2b2.jpg')
+                        "
+                    >
+                        <div class="block2__link-content">
+                            <p>Поможем сдать в аренду вашу недвижимость</p>
+                            <button
+                                class="btn block2__btn"
+                                type="button"
+                                onclick="ym(53763049, 'reachGoal', 'cons3'); return true;"
+                            >
+                                ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block2__href" id="block2"></div>
+                <div class="container">
+                    <h3>Недвижимость в Испании</h3>
+                    <div class="block2__column-wrapper">
+                        <div class="block2__column block2__column--1">
+                            <div class="block2__content-wrapper">
+                                <h4>Здоровье и качество жизни</h4>
+                                <p>
+                                    Всемирная организация здравоохранения
+                                    признала район Коста Бланки самым
+                                    благоприятным для здоровья человека в мире.
+                                </p>
+                                <p>
+                                    Сочетание климатических условий, чистой
+                                    экологии и здоровой средиземноморской пищи
+                                    способствует здоровому образу жизни.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block2__column block2__column--2">
+                            <div class="block2__slider-big">
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s1.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s2.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s3.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s4.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s5.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s6.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                            </div>
+                            <div class="block2__slider-small">
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c1.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c2.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c3.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c4.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c5.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c6.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                            </div>
+                            <div class="block2__price">
+                                <p>Недвижимость в Коста Бланка</p>
+                                <p>от 70.000 €</p>
+                            </div>
+                        </div>
+                        <div class="block2__column block2__column--3">
+                            <div class="block2__slider-big2">
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s7.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s8.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s9.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s10.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s11.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/s12.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                            </div>
+                            <div class="block2__slider-small2">
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c7.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c8.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c9.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c10.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c11.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                                <img
+                                    src="{{ 'assets/images/landing/spain/c21.jpg' | theme }}"
+                                    alt="pic"
+                                />
+                            </div>
+                        </div>
+                        <div class="block2__column block2__column--4">
+                            <div class="block2__content-wrapper">
+                                <h4>
+                                    Пляжный сезон —<br />
+                                    7 месяцев в году
+                                </h4>
+                                <p>
+                                    Средняя зимняя температура на побережье
+                                    +18,7 °С, летняя +31,7 °С.
+                                </p>
+                                <p>
+                                    Пляжный сезон начинается в мае и длится до
+                                    ноября. Солнце здесь светит всегда, дожди —
+                                    редкое зимнее явление.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block3" id="block3">
+                <div class="block3__title">
+                    <h3>Покупка недвижимости в Испании и ипотека</h3>
+                </div>
+                <div class="block3__wrapper">
+                    <div class="container">
+                        <h4>Покупка недвижимости</h4>
+                        <div class="block3__card-container">
+                            <div class="block3__card">
+                                <div class="block3__heading">
+                                    Богатое разнообразие предложений
+                                </div>
+                                <p>
+                                    Сейчас на рынке среди объектов жилой
+                                    недвижимости присутствуют предложения по
+                                    цене от нескольких десятков тысяч до
+                                    нескольких миллионов евро — от скромных
+                                    студий до роскошных вилл с причалами для
+                                    яхт.
+                                </p>
+                                <p>
+                                    Среди коммерческих объектов можно выбрать
+                                    всё: от небольшого участка земли до крупного
+                                    торгового центра.
+                                </p>
+                            </div>
+                            <div class="block3__card">
+                                <div class="block3__heading">
+                                    Право на Шенгенскую визу для владельцев
+                                    недвижимости
+                                </div>
+                                <p>
+                                    Владелец недвижимости в Испании и его
+                                    ближайшие родственники (супруг/супруга/дети
+                                    до 18 лет) имеют право на получение годовой
+                                    визы с правом многократного пересечения
+                                    границ Испании и стран-участниц Шенгенского
+                                    Соглашения.
+                                </p>
+                            </div>
+                            <div class="block3__card">
+                                <div class="block3__heading">
+                                    Минимальные затраты на содержание
+                                    недвижимости
+                                </div>
+                                <p>
+                                    Испанская недвижимость не является
+                                    обременительной с точки зрения затрат на её
+                                    содержание. Условные средние апартаменты,
+                                    приобретённые по цене около 200.000€,
+                                    потребуют около 300€ в год в качестве налога
+                                    на недвижимость и до 100€ в месяц
+                                    коммунальных платежей.
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="btn block3__btn"
+                            type="button"
+                            onclick="ym(53763049, 'reachGoal', 'cons4'); return true;"
+                        >
+                            ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                        </button>
+                    </div>
+                </div>
+                <div class="block3__mortgage">
+                    <div class="container">
+                        <h4>Ипотека в Испании</h4>
+                        <div class="block3__info">
+                            Простые условия её получения при покупке
+                            недвижимости:
+                        </div>
+                        <div class="block3__column-wrapper">
+                            <div class="block3__column">
+                                <p>
+                                    Банки предоставляют по ипотеке до 70% от
+                                    стоимости недвижимости
+                                </p>
+                                <p>
+                                    Банки в Испании предоставляют максимально 70
+                                    % от оценочной стоимости недвижимости, если
+                                    вы являетесь гражданином Евросоюза. И до 60
+                                    %, если вы им не являетесь.
+                                </p>
+                            </div>
+                            <div class="block3__column">
+                                <p>
+                                    Ипотека на срок от 5 до 25 лет с
+                                    возможностью досрочного погашения
+                                </p>
+                                <p>
+                                    Ипотечный кредит можно взять на срок от 5 до
+                                    25 лет. По закону Испании, вы имеете право
+                                    погасить кредит преждевременно, заплатив за
+                                    это мизерный штраф.
+                                </p>
+                            </div>
+                            <div class="block3__column">
+                                <p>Низкая процентная ставка</p>
+                                <p>
+                                    Процентная ставка по ипотеке плавающая
+                                    (примерно 3,9 %–4,2 %, октябрь 2014) и
+                                    зависит от европейской ставки
+                                    рефинансирования, которая на данный момент
+                                    очень низкая.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block3__txt-wrapper">
+                            <div class="block3__txt1">
+                                <p>
+                                    Официальные документы должны быть переведены
+                                    на испанский язык
+                                </p>
+                                <p>
+                                    НДФЛ , справка с рабочего места, выписка из
+                                    банковского счета, документы на право
+                                    собственности недвижимости у вас в стране
+                                    предоставляются на испанском или английском
+                                    языках.
+                                </p>
+                            </div>
+                            <div class="block3__txt2">
+                                <p>
+                                    Для своих клиентов Terrasun делает переводы
+                                    документов перед отправкой в банк.
+                                </p>
+                            </div>
+                            <button
+                                class="btn block3__btn"
+                                type="button"
+                                onclick="ym(53763049, 'reachGoal', 'cons5'); return true;"
+                            >
+                                ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block3__content-wrapper">
+                    <div
+                        class="block3__content-background"
+                        style="background-image: url('themes/sellmore/assets/images/landing/spain/b2.jpg')"
+                    >
+                        <div class="block3__col">
+                            <div class="block3__content">
+                                <div class="block3__content-title">
+                                    Мы поможем сделать правильный выбор при
+                                    покупке дома
+                                </div>
+                                <div class="block3__feature block3__feature--1">
+                                    <p>
+                                        Наши эксперты будут присутствовать при
+                                        покупке вашего дома
+                                    </p>
+                                </div>
+                                <div class="block3__feature block3__feature--2">
+                                    <p>
+                                        Мы тесно сотрудничаем с Посольством
+                                        Испании, банками и государственными
+                                        учреждениями
+                                    </p>
+                                </div>
+                                <div class="block3__feature block3__feature--3">
+                                    <p>
+                                        Поможем получить ипотечный кредит, чтобы
+                                        купить ваш дом на пляже с лучшими
+                                        условиями из доступных на рынке
+                                    </p>
+                                </div>
+                                <div class="block3__feature block3__feature--4">
+                                    <p>Мы экономим ваше время и деньги</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="block3__content-heading">
+                            <p>Более</p>
+                            <p>30 000</p>
+                        </div>
+                        <div class="block3__content-txt">
+                            <p>
+                                довольных семей с 1987 года и по настоящее время
+                                наслаждаются жизнью в своих домах на побережье
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block4" id="block4">
+                <div class="block4__title">
+                    <h3>Вид на жительство в Испании</h3>
+                </div>
+                <div class="container">
+                    <div class="block4__wrapper">
+                        <div class="block4__card">
+                            <p>
+                                Что такое вид на жительство в Испании, и как его
+                                получить?
+                            </p>
+                            <p>
+                                Вид на жительство (ВНЖ) должны оформить все
+                                иностранные граждане, которые планируют
+                                проживать в Испании более 90 дней.
+                            </p>
+                        </div>
+                        <div class="block4__txt-wrapper">
+                            <div class="block4__txt-title">
+                                Различают 2 типа ВНЖ в Испании:
+                            </div>
+                            <div class="block4__txt">
+                                Временный (residencia temporal)
+                            </div>
+                            <div class="block4__info">
+                                Выдаётся на срок от 90 дней до 5 лет.
+                                Иностранные граждане в Испании могут получить
+                                два вида временного вида на жительство: с правом
+                                и без права на работу.
+                            </div>
+                            <div class="block4__txt">
+                                Постоянный (residencia de larga duracion)
+                            </div>
+                            <div class="block4__info">
+                                Выдаётся на срок от 5 лет
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block4__support">
+                        <div class="block4__column1">
+                            <p>
+                                Компания Terrasun предоставляет юридическую
+                                поддержку при оформлении ВНЖ и также оказывает
+                                помощь в дальнейшей интеграции
+                            </p>
+                        </div>
+                        <div class="block4__column2">
+                            <p>
+                                Помогаем оформить вашего ребёнка в школу или
+                                университет, записаться на языковые курсы,
+                                нанять услуги уборки, оформить страхование на
+                                здоровье, дом, машину и т.д.
+                            </p>
+                        </div>
+                    </div>
+                    <button
+                        class="btn block4__btn"
+                        type="button"
+                        onclick="ym(53763049, 'reachGoal', 'cons6'); return true;"
+                    >
+                        ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                    </button>
+                    <h3>Как получить ВНЖ в Испании</h3>
+                    <div class="block4__step block4__step--1">
+                        <div class="block4__step-count">1 шаг.</div>
+                        <div class="block4__step-heading">
+                            Подготовка документов и обращение в посольство
+                        </div>
+                        <div class="block4__step-txt">
+                            Нужно предоставить в посольство Испании все
+                            необходимые документы, переведенные на испанский
+                            язык и заверенные у нотариуса. Консульство
+                            направляет документы в органы управления провинции,
+                            в которой вы хотите проживать. Там рассматривается
+                            запрос.
+                        </div>
+                    </div>
+                    <div class="block4__step block4__step--2">
+                        <div class="block4__step-count">2 шаг.</div>
+                        <div class="block4__step-heading">
+                            Собеседование и получение визы
+                        </div>
+                        <div class="block4__step-txt">
+                            Вас приглашают на собеседование в консульство
+                            Испании. В случае одобрения вам нужно будет получить
+                            визу . Вы должны будете прийти за получением визы в
+                            течение 1 месяца.
+                        </div>
+                    </div>
+                    <div class="block4__step block4__step--3">
+                        <div class="block4__step-count">3 шаг.</div>
+                        <div class="block4__step-heading">Заявление на ВНЖ</div>
+                        <div class="block4__step-txt">
+                            В течение 3 месяцев необходимо будет въехать на
+                            территорию Испании и подать заявление о получении
+                            ВНЖ в полицию. Перед этим вам нужно получить в мэрии
+                            справку о регистрации по месту жительства. В мэрии
+                            вам дадут справку о принятие документов и через
+                            месяц вы можете забирать свою долгожданную карточку
+                            с видом на жительство (tarjeta de residencia).
+                        </div>
+                    </div>
+                    <div class="block4__step block4__step--4">
+                        <div class="block4__step-count">4 шаг.</div>
+                        <div class="block4__step-heading">Продление ВНЖ</div>
+                        <div class="block4__step-txt">
+                            По прошествии первого года, но не ранее, чем за 60
+                            дней до конца срока действия карточки резидента вам
+                            нужно будет обратиться в полицию для продления ВНЖ.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="block5"
+                style="background-image: url('themes/sellmore/assets/images/landing/spain/b3.jpg')"
+            >
+                <div class="block5__wrapper">
+                    <div class="block5__column">
+                        <div class="block5__column-txt">
+                            <p>
+                                Напишите нам, чтобы получить консультацию по
+                                интересующим вас вопросам
+                            </p>
+                        </div>
+                        <div class="block5__column-txt">
+                            <p>
+                                Мы предоставим вам русскогооворящих сотрудников.
+                                Поиск и покупка недвижимости будет удобной и
+                                лёгкой для Вас, без языкового барьера.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="block5__column">
+                        <form class="block5__form" method="post">
+                            <div class="success">
+                                <p>Спасибо!</p>
+                                <p>Мы свяжемся с вами в ближайшее время</p>
+                            </div>
+                            <div class="block5__form-wrapper">
+                                <div class="block5__input-wrapper">
+                                    <input
+                                        type="hidden"
+                                        name="form_desc"
+                                        value="Террасан"
+                                    />
+                                    <p>Имя</p>
+                                    <input type="text" name="name" />
+                                </div>
+                                <div class="block5__input-wrapper">
+                                    <p>Телефон или e-mail</p>
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        required
+                                    /><span>Укажите удобный способ связи</span>
+                                </div>
+                            </div>
+                            <p>Ваш вопрос</p>
+                            <textarea
+                                class="block5__textarea"
+                                name="message"
+                            ></textarea>
+                            <button
+                                class="block5__submit"
+                                type="submit"
+                                onclick="ym(53763049, 'reachGoal', 'cons7'); return true;"
+                            >
+                                ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__column">
+                        <div class="footer__txt">
+                            <p>Компания Terrasun —</p>
+                            <p>
+                                официальный член ассоциаций PROVIA , API , AIPP
+                            </p>
+                        </div>
+                        <div class="footer__logo-wrap">
+                            <img
+                                src="{{ 'assets/images/landing/spain/b1-logo.png' | theme }}"
+                                alt="logo"
+                            />
+                            <img src="{{ 'assets/images/landing/spain/api.png' | theme }}" alt="logo" />
+                            <img
+                                src="{{ 'assets/images/landing/spain/logo2.png' | theme }}"
+                                alt="logo"
+                            />
+                        </div>
+                    </div>
+                    <div class="footer__column">
+                        <div class="footer__heading">ОФИС В ТОРРЕВЬЕХЕ</div>
+                        <div class="footer__info">
+                            C/ Palangre, 14, bajo - 03182 - Torrevieja - SPAIN
+                        </div>
+                        <div class="footer__heading">ОФИС В АЛИКАНТЕ</div>
+                        <div class="footer__info">
+                            Explanada de Espana, 8, 1?A - 03002 - Alicante -
+                            SPAIN
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="modal__overlay"></div>
+        <div class="modal">
+            <div class="modal__close">
+                <svg
+                    width="20"
+                    height="20"
+                    viewbox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        width="26"
+                        height="2"
+                        transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 1.51465 19.8994)"
+                        fill="#cccccc"
+                    ></rect>
+                    <rect
+                        width="26"
+                        height="2"
+                        transform="matrix(0.707107 0.707107 0.707107 -0.707107 0 1.51466)"
+                        fill="#cccccc"
+                    ></rect>
+                </svg>
+            </div>
+            <div class="modal__title">Консультация Terrasun</div>
+            <div class="modal__info">
+                Мы предоставим вам русскоговорящих сотрудников. Поиск и покупка
+                недвижимости будет удобной и лёгкой для Вас, без языкового
+                барьера.
+            </div>
+            <form class="modal__form" method="post">
+                <div class="modal__input-wrapper">
+                    <input type="hidden" name="form_desc" value="Террасан" />
+                    <p>Имя</p>
+                    <input type="text" name="name" />
+                </div>
+                <div class="modal__input-wrapper">
+                    <p>Телефон или e-mail</p>
+                    <input type="text" name="phone" required />
+                </div>
+                <p>Ваш вопрос</p>
+                <textarea class="modal__textarea" name="message"></textarea>
+                <button class="modal__submit" type="submit">
+                    ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                </button>
+            </form>
+            <div class="success">
+                <p>Спасибо!</p>
+                <p>Мы свяжемся с вами в ближайшее время</p>
+                <div class="success__close">
+                    <svg
+                        width="20"
+                        height="20"
+                        viewbox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect
+                            width="26"
+                            height="2"
+                            transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 1.51465 19.8994)"
+                            fill="#cccccc"
+                        ></rect>
+                        <rect
+                            width="26"
+                            height="2"
+                            transform="matrix(0.707107 0.707107 0.707107 -0.707107 0 1.51466)"
+                            fill="#cccccc"
+                        ></rect>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $("form").submit(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "/mailSend/foreign.php",
+                        data: $(this).serialize(),
+                    }).done(function () {
+                        $(this).find("input").val("");
+                        $("form").trigger("reset");
+                        $(".success").addClass("show-success");
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </body>
+    <script src="{{ [
+            'assets/js/landing/spain.js',
+        ]|theme }}"></script>
+</html>
