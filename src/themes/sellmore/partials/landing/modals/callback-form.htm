@@ -1,0 +1,18 @@
+<form 
+    data-request="onSendCallbackForm"
+    data-request-update="'landing/modals/callback-form-success': '#landing-modal-callback-form'"
+    class="modal__form" 
+>
+    <div class="modal__input-wrapper">
+        <input type="hidden" name="form_desc" value="{{ formDesc }}" />
+        <p>Имя</p>
+        <input type="text" name="name" />
+    </div>
+    <div class="modal__input-wrapper">
+        <p>Телефон или e-mail</p>
+        <input type="text" name="phone" required />
+    </div>
+    <p>Ваш вопрос</p>
+    <textarea class="modal__textarea" name="message"></textarea>
+    <button class="modal__submit" type="submit">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+</form>

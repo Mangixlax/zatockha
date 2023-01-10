@@ -2769,7 +2769,9 @@ h4 {
   width: 20px;
   height: 20px;
   top: 30px;
-  right: 30px
+  right: 30px;
+  z-index: 10;
+  pointer-events: all;
 }
 
 @media (max-width:1023px) {
@@ -2953,7 +2955,6 @@ h4 {
 }
 
 .success {
-  display: none;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: center;

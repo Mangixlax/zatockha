@@ -1,0 +1,32 @@
+<div class="modal__overlay"></div>
+<div class="modal">
+    <div class="modal__close">
+        <svg
+            width="20"
+            height="20"
+            viewbox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <rect
+                width="26"
+                height="2"
+                transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 1.51465 19.8994)"
+                fill="#cccccc"
+            ></rect>
+            <rect
+                width="26"
+                height="2"
+                transform="matrix(0.707107 0.707107 0.707107 -0.707107 0 1.51466)"
+                fill="#cccccc"
+            ></rect>
+        </svg>
+    </div>
+    <div class="modal__title">{{ title }}</div>
+    <div class="modal__info">
+        Мы предоставим вам русскоговорящих сотрудников. Поиск и покупка
+        недвижимости будет удобной и лёгкой для Вас, без языкового барьера.
+    </div>
+    <div id="landing-modal-callback-form" class="modal-callback__contain">
+        {% partial 'landing/modals/callback-form' formDesc=formDesc %}
+    </div>
+</div>
