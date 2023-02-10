@@ -705,22 +705,6 @@ meta_title = "RESTPROPERTY"
             </div>
         </footer>
         {% partial 'landing/modals/callback' title="Консультация RestProperty" formDesc='RestProperty' %}
-        <script>
-            $(document).ready(function () {
-                $("form").submit(function () {
-                    $.ajax({
-                        type: "POST",
-                        url: "/mailSend/foreign.php",
-                        data: $(this).serialize(),
-                    }).done(function () {
-                        $(this).find("input").val("");
-                        $("form").trigger("reset");
-                        $(".success").addClass("show-success");
-                    });
-                    return false;
-                });
-            });
-        </script>
     </body>
     <script src="{{ [
             'assets/js/landing/turkey.js',
