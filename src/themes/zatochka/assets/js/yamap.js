@@ -20,7 +20,7 @@ var panorama = document.getElementById('panorama');
                 balloonContent: '107078, г. Москва, ул. Новорязанская, дом 18, строение 21, этаж П, помещение 25'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: 'themes/sellmore/assets/images/map-marker.svg',
+                iconImageHref: 'themes/zatochka/assets/images/map-marker.svg',
                 iconImageSize: [40, 57],
                 iconImageOffset: [-20, -57],
             }));
